@@ -313,6 +313,7 @@ input[type=text]:placeholder,input[type=password]:focus {
     
 }
     
+
   </style>
 
 
@@ -337,6 +338,7 @@ input[type=text]:placeholder,input[type=password]:focus {
       
             
       ?>
+        <a href="#" class="underlineHover" style="margin:10px;">Forget password</a>
 
     <!-- Remind Passowrd -->
     <div id="formFooter">
