@@ -23,8 +23,8 @@
     <meta name="author" content="">
 
     <!-- Site Icons -->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="shortcut icon" href="uploads/logo.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="uploads/logo.ico">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -85,7 +85,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
-			<img class="img-fluid" src="images/logo.png" alt="" />
+			<img class="img-fluid" width="200px" style="" src="uploads/logo.png" alt=""  />
 		</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
@@ -116,7 +116,7 @@
               if(isset($_SESSION['email']))
               {
                   echo'<li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#team">'.$_SESSION['name'].'</a>
+              <a class="nav-link js-scroll-trigger" href="#team">'.$_SESSION['firstname'].'</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="logout.php">Logout</a>
@@ -130,7 +130,7 @@
             </li>
             <span style="color:#28a9e2; text-size:5px;margin-top:8px;">or</span>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#team">signup</a>
+              <a class="nav-link js-scroll-trigger" href="registration.php">signup</a>
             </li>';
                   
               }  
@@ -530,7 +530,7 @@
     <div class="copyrights">
         <div class="container">
             <div class="footer-distributed">
-				<a href="#"><img src="images/logo.png" alt="" /></a>
+				<a href="#"><img src="uploads/logo.png" width="200px" alt="" /></a>
                 <div class="footer-center">
                     <p class="footer-links">
                         <a href="#">Home</a>
@@ -540,8 +540,7 @@
                         <a href="#">Faq</a>
                         <a href="#">Contact</a>
                     </p>
-                    <p class="footer-company-name">All Rights Reserved. &copy; 2018 <a href="#">OnNext</a> Design By : 
-					<a href="https://html.design/">html design</a></p>
+                    <p class="footer-company-name">All Rights Reserved. &copy; 2020 <a href="#">BeLive</a></p>
                 </div>
             </div>
         </div><!-- end container -->

@@ -7,8 +7,10 @@
     {
         if ($user1->login($_POST['email'], $_POST['password']))
         {            
+            $_SESSION['firstname'] = $user1->firstname;
+            $_SESSION['lastname'] = $user1->lastname;
             $_SESSION['email'] = $user1->email;
-            $_SESSION['name'] = $user1->name;
+            $_SESSION['phonenumber'] = $user1->phonenumber;
             header("Location: index.php");
             
         }
@@ -24,9 +26,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Login</title>
-
-
+<title>Login</title>
+<link rel="shortcut icon" href="uploads/logo.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="uploads/logo.ico">
 
 
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -309,7 +311,7 @@ input[type=text]:placeholder,input[type=password]:focus {
     background-color: #fff;
     margin-left: 35.333%;
     padding: 3px;
-    margin-top: 5.5%;
+    margin-top: 4%;
     
 }
     
@@ -330,7 +332,7 @@ input[type=text]:placeholder,input[type=password]:focus {
 
     <!-- Login Form -->
     <form method="post" action="">
-      <input type="text" id="login" class="fadeIn second" name="email" placeholder="login"  maxlength="50" required>
+      <input type="text" id="login" class="fadeIn second" name="email" placeholder="email or phone number"   maxlength="50" required>
       <input type="password" id="password" class="fadeIn third" name="password" placeholder="password" maxlength="50" required>
       <input type="submit" class="fadeIn fourth" value="Log In" name="submit">
     </form>
@@ -338,7 +340,7 @@ input[type=text]:placeholder,input[type=password]:focus {
       
             
       ?>
-        <a href="#" class="underlineHover" style="margin:10px;">Forget password</a>
+        <a href="#" class="underlineHover" style="margin:10px;margin-top:-10px;">Forget password</a>
 
     <!-- Remind Passowrd -->
     <div id="formFooter">

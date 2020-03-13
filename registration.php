@@ -1,4 +1,9 @@
 <?php
+    require 'oop.php';
+    session_start();
+    $user1 = new user();
+    
+    
 $host="127.0.0.1";
 $user="root";
 $password="";
@@ -14,15 +19,19 @@ if(mysqli_connect_errno()){
 <html>
 <head>
 	<title>Registration Form</title>
+    
+    <link rel="shortcut icon" href="uploads/logo.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="uploads/logo.ico">
+    
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
         <style>
             
             .the-big-one
             {
                 background-color:#80bdff;
-                margin-left: 300px;
+                margin-left: 33.33%;
                 margin-top: 50px;
-                 width: 50%;
+                width: 33.33%;
                 border-radius:10px;
 
                 
@@ -38,7 +47,8 @@ if(mysqli_connect_errno()){
             {
                 
                
-                background-image: url(new1.jpg);
+                background-image: url(uploads/new1.jpg);
+                background-size: cover;
                 
             }
             #register
@@ -70,7 +80,7 @@ if(mysqli_connect_errno()){
     
     color: red;
     display: block;
-    margin-left: 290px;
+    margin-left: 33%;
     padding: 3px;
     margin-top:110px;
     
@@ -83,7 +93,7 @@ if(mysqli_connect_errno()){
     font-weight: 500;
     color: red;
     display: block;
-    margin-left: 280px;
+    margin-left: 32.5%;
     padding: 3px;
     margin-top:182px;
     
@@ -96,7 +106,7 @@ if(mysqli_connect_errno()){
     font-weight: 500;
     color: red;
     display: block;
-    margin-left: 330px;
+    margin-left: 36%;
     padding: 3px;
     margin-top:321px;
     
@@ -109,9 +119,9 @@ if(mysqli_connect_errno()){
     font-weight: 500;
     color: red;
     display: block;
-    margin-left: 335px;
+    margin-left: 36%;
     padding: 3px;
-    margin-top:393px;
+    margin-top:390px;
     
 }
 .handel_error_connection{
@@ -135,36 +145,46 @@ if(mysqli_connect_errno()){
 
 <div>
 	<?php
+    
+    
 	if(isset($_POST['create'])){
         
-	$firstname = $_POST['firstname'];
-	$lastname = $_POST['lastname'];
-	$email 	= $_POST['email'];
-	$phonenumber= $_POST['phonenumber'];
-	$password =($_POST['password']);
-        if(!preg_match("/^([a-zA-Z' ]+)$/",$firstname))
+        $user1->email = $_POST['email'];
+        $user1->setpass($_POST['password']);
+        $user1->firstname = $_POST['firstname'];
+        $user1->lastname = $_POST['lastname'];
+        $user1->phonenumber = $_POST['phonenumber'];
+        if(!preg_match("/^([a-zA-Z' ]+)$/",$user1->firstname))
         {
            echo'<div class="firstname">The First name is invalid</div>';
         }
-  else if(!preg_match("/^([a-zA-Z' ]+)$/",$lastname))
+  else if(!preg_match("/^([a-zA-Z' ]+)$/",$user1->lastname))
         {
            echo'<div class="lastname">The last name is invalid</div>';
         }
-  else if(!preg_match("/^([0][1][4][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9])$/",$phonenumber))
+  else if(!preg_match("/^([0][1][4][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9])$/",$user1->phonenumber))
         {
            echo'<div class="phonenumber">The phone number incorrect</div>';
         }
-  else if(!preg_match("/^([a-z]|[A-Z]|[0-9])+$/",$password))
+  else if(!preg_match("/^([a-z]|[A-Z]|[0-9])+$/",$_POST['password']))
         {
            echo'<div class="password">The password has to include just nubermer or character </div>';
         }
  else {
         
-        $query="insert into user (firstname,lastname,email, phonenumber, password )values('". $firstname  . "','". $lastname  . "','". $email  . "','". $phonenumber  . "','". $password . "')";
+        $query="insert into user (firstname,lastname,email, phonenumber, password )values('". $user1->firstname  . "','". $user1->lastname  . "','". $user1->email  . "','". $user1->phonenumber  . "','". $_POST['password'] . "')";
         $result=  mysqli_query($connect, $query);
 		if($result){
-                   header("Location:login.php");
-		}else{
+            if ($user1->login($_POST['email'], $_POST['password']))
+            {            
+                $_SESSION['firstname'] = $user1->firstname;
+                $_SESSION['lastname'] = $user1->lastname;
+                $_SESSION['email'] = $user1->email;
+                $_SESSION['phonenumber'] = $user1->phonenumber;
+                header("Location: index.php");
+            }
+            }
+		else{
                       echo'<div class="handel_error_connection">The phone number or the email already signed   </div>';
 		}
         }
