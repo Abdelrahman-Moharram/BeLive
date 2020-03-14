@@ -344,7 +344,7 @@ input[type=text]:placeholder,input[type=password]:focus {
 
     <!-- Remind Passowrd -->
     <div id="formFooter">
-      <span style="margin-right: 10px; ">or</span><a class="underlineHover" href="#">Signup</a>
+      <span style="margin-right: 10px; ">or</span><a class="underlineHover" href="registration.php">Signup</a>
     </div>
 
   </div>
