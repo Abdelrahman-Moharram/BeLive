@@ -34,6 +34,7 @@ class person
             $this->firstname = $row['firstname'];
             $this->lastname = $row['lastname'];
             $this->phonenumber = $row['phonenumber'];
+            $role = $row['role'];
             return 1;
         }
         else

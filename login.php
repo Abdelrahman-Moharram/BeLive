@@ -11,7 +11,10 @@
             $_SESSION['lastname'] = $user1->lastname;
             $_SESSION['email'] = $user1->email;
             $_SESSION['phonenumber'] = $user1->phonenumber;
-            header("Location: index.php");
+            if($role)
+                header("Location: index.php");
+            else
+                header("Location: admin.php");
             
         }
         else
@@ -348,7 +351,7 @@ input[type=text]:placeholder,input[type=password]:focus {
       
             
       ?>
-        <a href="#" class="underlineHover" style="margin:10px;margin-top:-10px;">Forget password</a>
+        <a href="forgetpass.php" class="underlineHover" style="margin:10px;margin-top:-10px;">Forget password</a>
 
     <!-- Remind Passowrd -->
     <div id="formFooter">
