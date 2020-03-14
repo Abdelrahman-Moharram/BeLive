@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 13, 2020 at 08:10 PM
+-- Generation Time: Mar 14, 2020 at 10:00 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -21,6 +21,18 @@ SET time_zone = "+00:00";
 --
 -- Database: `sw2`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `complaint`
+--
+
+CREATE TABLE `complaint` (
+  `id` int(10) NOT NULL,
+  `description` varchar(100) NOT NULL,
+  `FK_USER` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -77,6 +89,15 @@ CREATE TABLE `user` (
   `password` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `firstname`, `lastname`, `role`, `email`, `phonenumber`, `balance`, `password`) VALUES
+(1, 'Nour', 'Saleh', 0, 'noursalehothman96@gmail.com', '01454311204', 0, '12345'),
+(2, 'Nour', 'Saleh', 0, 'noursalehothman96@gmail.com', '01454311204', 0, '123'),
+(3, 'Aida', 'Ali', 0, 'aida1@gmail.com', '01454311204', 0, '147');
+
 -- --------------------------------------------------------
 
 --
@@ -103,6 +124,13 @@ CREATE TABLE `usertransaction` (
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `complaint`
+--
+ALTER TABLE `complaint`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `C8` (`FK_USER`);
 
 --
 -- Indexes for table `offer`
@@ -146,6 +174,12 @@ ALTER TABLE `usertransaction`
 --
 
 --
+-- AUTO_INCREMENT for table `complaint`
+--
+ALTER TABLE `complaint`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `offer`
 --
 ALTER TABLE `offer`
@@ -167,11 +201,17 @@ ALTER TABLE `transaction`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `complaint`
+--
+ALTER TABLE `complaint`
+  ADD CONSTRAINT `C8` FOREIGN KEY (`FK_USER`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `service`
