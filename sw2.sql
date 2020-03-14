@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 14, 2020 at 10:00 AM
+-- Generation Time: Mar 14, 2020 at 12:49 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -21,56 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `sw2`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `complaint`
---
-
-CREATE TABLE `complaint` (
-  `id` int(10) NOT NULL,
-  `description` varchar(100) NOT NULL,
-  `FK_USER` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `offer`
---
-
-CREATE TABLE `offer` (
-  `id` int(10) NOT NULL,
-  `percentage` float NOT NULL,
-  `type` varchar(10) NOT NULL,
-  `startDate` date NOT NULL,
-  `endDate` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `service`
---
-
-CREATE TABLE `service` (
-  `id` int(10) NOT NULL,
-  `type` varchar(20) NOT NULL,
-  `description` varchar(50) NOT NULL,
-  `FK_OFFER` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `transaction`
---
-
-CREATE TABLE `transaction` (
-  `id` int(10) NOT NULL,
-  `type` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -94,144 +44,30 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `firstname`, `lastname`, `role`, `email`, `phonenumber`, `balance`, `password`) VALUES
-(1, 'Nour', 'Saleh', 0, 'noursalehothman96@gmail.com', '01454311204', 0, '12345'),
-(2, 'Nour', 'Saleh', 0, 'noursalehothman96@gmail.com', '01454311204', 0, '123'),
-(3, 'Aida', 'Ali', 0, 'aida1@gmail.com', '01454311204', 0, '147');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `userservice`
---
-
-CREATE TABLE `userservice` (
-  `serviceId` int(11) NOT NULL,
-  `userId` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `usertransaction`
---
-
-CREATE TABLE `usertransaction` (
-  `userId` int(10) NOT NULL,
-  `transactionId` int(10) NOT NULL,
-  `time` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+(3, 'Aida', 'Ali', 0, 'aida1@gmail.com', '01454311204', 0, '147'),
+(5, 'Nour', 'Saleh', 0, 'noursalehothman96@gmail.com', '01494666445', 0, '123');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `complaint`
---
-ALTER TABLE `complaint`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `C8` (`FK_USER`);
-
---
--- Indexes for table `offer`
---
-ALTER TABLE `offer`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `service`
---
-ALTER TABLE `service`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `C7` (`FK_OFFER`);
-
---
--- Indexes for table `transaction`
---
-ALTER TABLE `transaction`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`,`phonenumber`,`email`) USING BTREE;
-
---
--- Indexes for table `userservice`
---
-ALTER TABLE `userservice`
-  ADD PRIMARY KEY (`serviceId`,`userId`);
-
---
--- Indexes for table `usertransaction`
---
-ALTER TABLE `usertransaction`
-  ADD PRIMARY KEY (`userId`,`transactionId`,`time`);
+  ADD PRIMARY KEY (`id`,`phonenumber`,`email`) USING BTREE,
+  ADD UNIQUE KEY `email` (`email`),
+  ADD UNIQUE KEY `phonenumber` (`phonenumber`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `complaint`
---
-ALTER TABLE `complaint`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `offer`
---
-ALTER TABLE `offer`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `service`
---
-ALTER TABLE `service`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `transaction`
---
-ALTER TABLE `transaction`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `complaint`
---
-ALTER TABLE `complaint`
-  ADD CONSTRAINT `C8` FOREIGN KEY (`FK_USER`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `service`
---
-ALTER TABLE `service`
-  ADD CONSTRAINT `C7` FOREIGN KEY (`FK_OFFER`) REFERENCES `offer` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `userservice`
---
-ALTER TABLE `userservice`
-  ADD CONSTRAINT `C5` FOREIGN KEY (`serviceId`) REFERENCES `service` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `C6` FOREIGN KEY (`userId`) REFERENCES `user` (`id`) ON UPDATE CASCADE;
-
---
--- Constraints for table `usertransaction`
---
-ALTER TABLE `usertransaction`
-  ADD CONSTRAINT `C1` FOREIGN KEY (`userId`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `C2` FOREIGN KEY (`transactionId`) REFERENCES `transaction` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

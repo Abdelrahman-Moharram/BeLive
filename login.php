@@ -32,17 +32,25 @@
 
 
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link href="js/login_effect.js" rel="script" id="bootstrap-js">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/login_effect.js">
+  function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
 <!------ Include the above in your HEAD tag ---------->
   
 <style type="text/css">
     
 /* BASIC */
 
-html {
-  background-color: #56baed;
-}
+
 
 body {
   font-family: "Poppins", sans-serif;
@@ -331,10 +339,10 @@ input[type=text]:placeholder,input[type=password]:focus {
     </div>
 
     <!-- Login Form -->
-    <form method="post" action="">
+    <form method="post" action="" id="myForm">
       <input type="text" id="login" class="fadeIn second" name="email" placeholder="email or phone number"   maxlength="50" required>
       <input type="password" id="password" class="fadeIn third" name="password" placeholder="password" maxlength="50" required>
-      <input type="submit" class="fadeIn fourth" value="Log In" name="submit">
+      <input type="submit" class="fadeIn fourth" id="closeForm" value="Log In" name="submit" onclick="closeForm()">
     </form>
     <?php
       
@@ -349,6 +357,7 @@ input[type=text]:placeholder,input[type=password]:focus {
 
   </div>
 </div>
+
 
 </body>
 </html>
