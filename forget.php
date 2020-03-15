@@ -5,7 +5,7 @@
 	body {
             margin: 0;
             padding: 0;
-            background-image: url(com.jpg);
+            background-image: url(uploads/com.jpg);
              background-repeat: no-repeat;
               background-attachment: fixed;
   background-size: cover;
@@ -91,7 +91,7 @@ width: 100%;
 </head>
 <body>
 	<div class="forget">
-		<img src="images.png" class="image">
+		<img src="uploads/images.png" class="image">
 	<form>
 		<label for="e-mail" >please enter your email:</label>
 		<br>

@@ -1,20 +1,31 @@
 <?php
 
-    require 'oop.php';
     session_start();
-    $user1 = new user();
+    require 'db_conn.php';
     if(isset($_POST['submit']))
     {
-        if ($user1->login($_POST['email'], $_POST['password']))
-        {            
-            $_SESSION['firstname'] = $user1->firstname;
-            $_SESSION['lastname'] = $user1->lastname;
-            $_SESSION['email'] = $user1->email;
-            $_SESSION['phonenumber'] = $user1->phonenumber;
-            if($role)
+        
+        
+		$query ='select * from user where (phonenumber="'.$_POST['email'].'" OR email = "'.$_POST['email'].'") AND password = "'.$_POST['password'].'"';
+        $result = mysqli_query($connect, $query);
+        
+        if($row = mysqli_fetch_assoc($result))
+        {
+            $_SESSION['email'] = $row['email'];
+            $_SESSION['firstname'] = $row['firstname'];
+            $_SESSION['lastname'] = $row['lastname'];
+            $_SESSION['phonenumber'] = $row['phonenumber'];
+            $role = $row['role'];
+                    
+            
+            if($role == 0)
+            {
                 header("Location: index.php");
+            }
             else
+            {
                 header("Location: admin.php");
+            }
             
         }
         else
@@ -351,7 +362,7 @@ input[type=text]:placeholder,input[type=password]:focus {
       
             
       ?>
-        <a href="forgetpass.php" class="underlineHover" style="margin:10px;margin-top:-10px;">Forget password</a>
+        <a href="forget.php" class="underlineHover" style="margin:10px;margin-top:-10px;">Forget password</a>
 
     <!-- Remind Passowrd -->
     <div id="formFooter">
