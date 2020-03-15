@@ -1,18 +1,12 @@
 <?php
    
     session_start();
+
+    require'db_conn.php';
    
     
    // the connecthion 
-$host="127.0.0.1";
-$user="root";
-$password="";
-$database="sw2";
-$connect=  mysqli_connect($host, $user, $password, $database);
-if(mysqli_connect_errno()){
-    die("cannot connect to database field:". mysqli_connect_error());
-    
-}
+
  
 ?>
 <!DOCTYPE html>
@@ -138,6 +132,20 @@ if(mysqli_connect_errno()){
     background-color: burlywood;
     
 }
+    .warning{
+    border-radius: 10px 10px 0px 0px;
+    width: 29.333%;
+    position: absolute;
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+    display: block;
+    margin-left: 35.333%;
+    padding: 3px;
+    margin-top: -2%;
+    
+}
             
         </style>
 </head>
@@ -149,48 +157,70 @@ if(mysqli_connect_errno()){
     
 	if(isset($_POST['create'])){
         
-        $user1->email = $_POST['email'];
-        $user1->setpass($_POST['password']);
-        $user1->firstname = $_POST['firstname'];
-        $user1->lastname = $_POST['lastname'];
-        $user1->phonenumber = $_POST['phonenumber'];
-        if(!preg_match("/^([a-zA-Z' ]+)$/",$user1->firstname))
+        if(!preg_match("/^([a-zA-Z' ]+)$/",$_POST['firstname']))
         {
            echo'<div class="firstname">The First name is invalid</div>';
         }
-  else if(!preg_match("/^([a-zA-Z' ]+)$/",$user1->lastname))
+        else if(!preg_match("/^([a-zA-Z' ]+)$/",$_POST['lastname']))
         {
            echo'<div class="lastname">The last name is invalid</div>';
         }
-  else if(!preg_match("/^([0][1][4][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9])$/",$user1->phonenumber))
+        else if(!preg_match("/^([0][1][4][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9])$/",$_POST['phonenumber']))
         {
            echo'<div class="phonenumber">The phone number incorrect</div>';
         }
-  else if(!preg_match("/^([a-z]|[A-Z]|[0-9])+$/",$_POST['password']))
+        else if(!preg_match("/^([a-z]|[A-Z]|[0-9])+$/",$_POST['password']))
         {
            echo'<div class="password">The password has to include just nubermer or character </div>';
         }
- else {
-        
-        $query="insert into user (firstname,lastname,email, phonenumber, password )values('". $user1->firstname  . "','". $user1->lastname  . "','". $user1->email  . "','". $user1->phonenumber  . "','". $_POST['password'] . "')";
-        $result=  mysqli_query($connect, $query);
-		if($result){
-            if ($user1->login($_POST['email'], $_POST['password']))
-            {            
-                $_SESSION['firstname'] = $user1->firstname;
-                $_SESSION['lastname'] = $user1->lastname;
-                $_SESSION['email'] = $user1->email;
-                $_SESSION['phonenumber'] = $user1->phonenumber;
-                header("Location: index.php");
-            }
-            }
-		else{
-                      echo'<div class="handel_error_connection">The phone number or the email already signed   </div>';
-		}
+        else {
+                
+               
+                        ////////////////////////// login /////////////////
+
+                $query2 ='select * from user where (phonenumber="'.$_POST['phonenumber'].'" OR email = "'.$_POST['email'].'") AND password = "'.$_POST['password'].'"';
+            
+                $result2 = mysqli_query($connect, $query2);
+            
+                if($row = mysqli_fetch_assoc($result2))
+                {
+                    echo'<div class="warning">already registerd</div>';
+                }
+                else
+                {
+                   $query="insert into user (firstname,lastname,email, phonenumber, password )values('". $_POST['firstname']  . "','". $_POST['lastname']  . "','". $_POST['email'] . "','". $_POST['phonenumber']  . "','". $_POST['password'] . "')"; 
+                   $result = mysqli_query($connect, $query);
+                    
+                   $result2 = mysqli_query($connect, $query2);
+                    
+                    if($row = mysqli_fetch_assoc($result2))
+                    {
+                    
+                        $_SESSION['email'] = $row['email'];
+                        $_SESSION['firstname'] = $row['firstname'];
+                        $_SESSION['lastname'] = $row['lastname'];
+                        $_SESSION['phonenumber'] = $row['phonenumber'];
+                        $role = $row['role'];
+                        if($role == 0)
+                        {
+                            header("Location: index.php");
+                        }
+                        else
+                        {
+                            header("Location: admin.php");
+                        }
+            
+                    }
+                    else
+                    {
+                       echo'<div class="warning">some thing wrong call admin</div>'; 
+                    }
+                }
         }
+    }
        
-        
-        }
+    
+           
 	?>
     
 </div>

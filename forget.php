@@ -1,7 +1,10 @@
 <html>
 <head>
-	<title>forget password</title>
-	<style>
+    <title>forget password</title>
+    <link rel="shortcut icon" href="uploads/logo.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="uploads/logo.ico">
+	
+<style>
 	body {
             margin: 0;
             padding: 0;
