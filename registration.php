@@ -1,7 +1,7 @@
 <?php
-    require 'oop.php';
+   
     session_start();
-    $user1 = new user();
+   
     
     
 $host="127.0.0.1";
