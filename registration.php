@@ -22,7 +22,7 @@
             
             .the-big-one
             {
-                background-color:#80bdff;
+                background-color:#fff3cd;
                 margin-left: 33.33%;
                 margin-top: 50px;
                 width: 33.33%;
@@ -41,7 +41,7 @@
             {
                 
                
-                background-image: url(uploads/new1.jpg);
+                background-image: url(uploads/com.jpg);
                 background-size: cover;
                 
             }
@@ -139,11 +139,11 @@
     text-align: center;
     font-weight: 500;
     font-size: 18px;
-    color: #fff;
+    color: red;
     display: block;
     margin-left: 35.333%;
     padding: 3px;
-    margin-top: -2%;
+    margin-top: 5%;
     
 }
             
@@ -206,27 +206,27 @@
                     $result2 = mysqli_query($connect, $query2);
                     if($row = mysqli_fetch_assoc($result2))
                     {
+<<<<<<< HEAD
                     
                         //var_dump(mysqli_fetch_assoc($result2));                    
+=======
+>>>>>>> 315b2d84bc556dab2f459fadc2d3d0e10edb7700
                         $_SESSION['email'] = $row['email'];
                         $_SESSION['firstname'] = $row['firstname'];
                         $_SESSION['lastname'] = $row['lastname'];
                         $_SESSION['phonenumber'] = $row['phonenumber'];
                         $role = $row['role'];
-                        if($role == 0)
-                        {
+                        
                             header("Location: index.php");
-                        }
-                        else
-                        {
-                            header("Location: admin.php");
-                        }
-            
                     }
                     else
                     {
+<<<<<<< HEAD
                      //  var_dump(mysqli_fetch_assoc($result2)); 
                        echo'<div class="warning">some thing wrong call admin</div>'; 
+=======
+                       echo'<div class="warning">The phone number or the Email already registerd</div>'; 
+>>>>>>> 315b2d84bc556dab2f459fadc2d3d0e10edb7700
                     }
                 }
         }
