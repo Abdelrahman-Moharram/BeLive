@@ -180,22 +180,34 @@
 
                 $query2 ='select * from user where (phonenumber="'.$_POST['phonenumber'].'" OR email = "'.$_POST['email'].'") AND password = "'.$_POST['password'].'"';
             
-                $result2 = mysqli_query($connect, $query2);
-            
-                if($row = mysqli_fetch_assoc($result2))
+
+
+
+                $getphone = mysqli_query($connect,'select * from user where phonenumber="'.$_POST['phonenumber'].'"');
+                $getemail = mysqli_query($connect,'select * from user where email="'.$_POST['email'].'"');
+
+                if($row = mysqli_fetch_assoc($getphone))
                 {
-                    echo'<div class="warning">already registerd</div>';
+                    echo'<div class="warning">this phone number already registerd</div>';
+                }
+                elseif ($row = mysqli_fetch_assoc($getemail)) {
+                
+                    echo'<div class="warning">this email already registerd</div>';
+                    
                 }
                 else
                 {
-                   $query="insert into user (firstname,lastname,email, phonenumber, password )values('". $_POST['firstname']  . "','". $_POST['lastname']  . "','". $_POST['email'] . "','". $_POST['phonenumber']  . "','". $_POST['password'] . "')"; 
-                   $result = mysqli_query($connect, $query);
+                  $query="insert into user (firstname,lastname,email, phonenumber, password )values('".$_POST['firstname']."','".$_POST['lastname']."','".$_OST['email'] . "','". $_POST['phonenumber']  . "','". $_POST['password'] . "')"; 
+                  
+
+
+                    $result = mysqli_query($connect, $query);
                     
-                   $result2 = mysqli_query($connect, $query2);
-                    
+                    $result2 = mysqli_query($connect, $query2);
                     if($row = mysqli_fetch_assoc($result2))
                     {
                     
+                        //var_dump(mysqli_fetch_assoc($result2));                    
                         $_SESSION['email'] = $row['email'];
                         $_SESSION['firstname'] = $row['firstname'];
                         $_SESSION['lastname'] = $row['lastname'];
@@ -213,6 +225,7 @@
                     }
                     else
                     {
+                     //  var_dump(mysqli_fetch_assoc($result2)); 
                        echo'<div class="warning">some thing wrong call admin</div>'; 
                     }
                 }
