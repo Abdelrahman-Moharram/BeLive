@@ -13,7 +13,7 @@
 	body {
             margin: 0;
             padding: 0;
-            background-image: url(uploads/com.jpg);
+            background-image: url(images/449916.jpg);
              background-repeat: no-repeat;
               background-attachment: fixed;
   background-size: cover;
@@ -27,7 +27,7 @@
         .forget {
             width: 400px;
             height: 250px;
-            background: grey;
+            background: #333333;
             color: #fff;
             top: 50%;
             left: 50%;
@@ -37,6 +37,7 @@
             box-sizing: border-box;
             margin-top: 320px;
             text-align: center;
+
         }
 .forget label {
 width: 100%;
@@ -89,8 +90,15 @@ width: 100%;
 }
 .forget input[type="submit"]{
 	cursor: pointer;
+	font-size: 20px;
 	background: #599bb5;
 	color: #000;
+	border-radius:10px;
+	color: white;
+	-webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+  width: 100px;
 
 }
 
@@ -99,17 +107,17 @@ width: 100%;
 </head>
 <body>
 	<div class="forget">
+		<br>
 		<img src="uploads/images.png" class="image">
-	<form>
-		<label for="e-mail" >please enter your email:</label>
-		<br>
-		<input type="text" name="email">
-		<br>
-		
-		<input type="submit" value="Submit">
+		<form>
+			<label for="e-mail" >Please enter your email :</label>
+			<br>
+			<input type="text" name="email" placeholder="Email...">
+			<br>
+			<input type="submit" value="Submit">
 
-	</form>
-</div>
+		</form>
+    </div>
 
 </body>
 </html>

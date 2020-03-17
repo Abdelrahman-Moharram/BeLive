@@ -288,6 +288,7 @@ input[type=text]:placeholder,input[type=password]:focus {
   -webkit-animation-delay: 1s;
   -moz-animation-delay: 1s;
   animation-delay: 1s;
+
 }
 
 /* Simple CSS3 Fade-in Animation */
@@ -342,20 +343,21 @@ input[type=text]:placeholder,input[type=password]:focus {
 
 
 </head>
-<body>
-<div class="wrapper fadeInDown">
-  <div id="formContent">
+<body style="background-image: url(images/449916.jpg);">
+<div class="wrapper fadeInDown"  >
+  <div id="formContent"style="background-color: #333333" >
     <!-- Tabs Titles -->
 
     <!-- Icon -->
-    <div class="fadeIn first">
+    <div class="fadeIn first" >
+      <br>
       <img src="uploads/gallery_img_01.png" id="icon" alt="User Icon" width="10px" />
     </div>
 
     <!-- Login Form -->
     <form method="post" action="" id="myForm">
-      <input type="text" id="login" class="fadeIn second" name="email" placeholder="email or phone number"   maxlength="50" required>
-      <input type="password" id="password" class="fadeIn third" name="password" placeholder="password" maxlength="50" required>
+      <input type="text" id="login" class="fadeIn second" name="email" placeholder="email or phone number.."   maxlength="50" required>
+      <input type="password" id="password" class="fadeIn third" name="password" placeholder="password.." maxlength="50" required>
       <input type="submit" class="fadeIn fourth" id="closeForm" value="Log In" name="submit" onclick="closeForm()">
     </form>
     <?php
@@ -365,8 +367,8 @@ input[type=text]:placeholder,input[type=password]:focus {
         <a href="forget.php" class="underlineHover" style="margin:10px;margin-top:-10px;">Forget password</a>
 
     <!-- Remind Passowrd -->
-    <div id="formFooter">
-      <span style="margin-right: 10px; ">or</span><a class="underlineHover" href="registration.php">Signup</a>
+    <div id="formFooter" style="background-color: #333333">
+      <span style="margin-right: 10px;color: white; " >or</span><a class="underlineHover" href="registration.php">Signup</a>
     </div>
 
   </div>
