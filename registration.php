@@ -24,7 +24,7 @@
             {
                 background: #333333;
                 margin-left: 33.33%;
-                margin-top: 50px;
+                margin-top: 7%;
                 width: 33.33%;
                 border-radius:10px;
 
@@ -253,8 +253,11 @@
 
     <div class="the-big-one">
         <form  method="post">
-            <h1 class="Registration">Registration</h1>
+                  <a href="index.php" style="height:50px;margin-left:40%;margin-top:10px;"><img src="uploads/logo.png" id="icon" alt="User Icon" width="auto" height="40px;" style="margin-top:20px;" /></a>
+
+<!--
             <p class="pragraph">Create your account it takes a minute </p>
+-->
 	<hr class="mb-3">
         <label for="firstname" class="text" ><b>First Name</b></label>
 	<input class="form-control" id="firstname" type="text" name="firstname" placeholder="First Name.." required>
@@ -271,7 +274,7 @@
 	<label for="password" class="text" ><b>Password</b></label>
 	<input class="form-control" id="password"  type="password" name="password" placeholder="Password.." required>
 	<hr class="mb-3">
-        <input class="btn btn-primary" type="submit" id="register" name="create" value="Sign Up">
+        <input class="btn btn-primary" type="submit" id="register" name="create" value="Sign Up" style="margin-bottom:20px;">
 	</form>
 </div>
     

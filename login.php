@@ -298,13 +298,13 @@ input[type=text]:placeholder,input[type=password]:focus {
   bottom: -10px;
   width: 0;
   height: 2px;
-  background-color: #56baed;
+  background-color: #fff;
   content: "";
   transition: width 0.2s;
 }
 
 .underlineHover:hover {
-  color: #0d0d0d;
+  color: #fff;
 }
 
 .underlineHover:hover:after{
@@ -351,7 +351,7 @@ input[type=text]:placeholder,input[type=password]:focus {
     <!-- Icon -->
     <div class="fadeIn first" >
       <br>
-      <img src="uploads/gallery_img_01.png" id="icon" alt="User Icon" width="10px" />
+      <a href="index.php" style="width:100%;height:auto;margin:20px;"><img src="uploads/logo.png" id="icon" alt="User Icon" width="40px" /></a>
     </div>
 
     <!-- Login Form -->
