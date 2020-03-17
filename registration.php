@@ -196,7 +196,7 @@
                 }
                 else
                 {
-                  $query="insert into user (firstname,lastname,email, phonenumber, password )values('".$_POST['firstname']."','".$_POST['lastname']."','".$_OST['email'] . "','". $_POST['phonenumber']  . "','". $_POST['password'] . "')"; 
+                  $query="insert into user (firstname,lastname,email, phonenumber, password )values('".$_POST['firstname']."','".$_POST['lastname']."','".$_POST['email'] . "','". $_POST['phonenumber']  . "','". $_POST['password'] . "')"; 
                   
 
 
