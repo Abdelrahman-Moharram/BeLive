@@ -22,7 +22,7 @@
             
             .the-big-one
             {
-                background-color:#fff3cd;
+                background: #333333;
                 margin-left: 33.33%;
                 margin-top: 50px;
                 width: 33.33%;
@@ -41,7 +41,7 @@
             {
                 
                
-                background-image: url(uploads/com.jpg);
+                background-image: url(images/449916.jpg);
                 background-size: cover;
                 
             }
@@ -49,104 +49,119 @@
             {
               margin-left: 200px;  
               margin-top:-20px;
+              cursor: pointer;
+            font-size: 20px;
+            background: #599bb5;
+            color: #000;
+            border-radius:10px;
+            color: white;
+            -webkit-animation-delay: 1s;
+          -moz-animation-delay: 1s;
+          animation-delay: 1s;
+          width: 100px;
+
                 
             }
             .Registration
             {
                margin-left: 140px; 
+               color: white;
                 
             }
             .pragraph
             {
                 margin-left: 100px;
+                color: white;
+
             }
             .text
             {
               margin-left: 10px;  
+              color: white;
                 
             }
            .firstname{
-    border-radius: 10px 10px 0px 0px;
-    width:400px;
-    position: absolute;
-    text-align: center;
-    font-weight: 500;
-    
-    color: red;
-    display: block;
-    margin-left: 33%;
-    padding: 3px;
-    margin-top:110px;
-    
-}
-.lastname{
-    border-radius: 10px 10px 0px 0px;
-    width:400px;
-    position: absolute;
-    text-align: center;
-    font-weight: 500;
-    color: red;
-    display: block;
-    margin-left: 32.5%;
-    padding: 3px;
-    margin-top:182px;
-    
-}
-.phonenumber{
-    border-radius: 10px 10px 0px 0px;
-    width:400px;
-    position: absolute;
-    text-align: center;
-    font-weight: 500;
-    color: red;
-    display: block;
-    margin-left: 36%;
-    padding: 3px;
-    margin-top:321px;
-    
-}
-.password{
-    border-radius: 10px 10px 0px 0px;
-    width:500px;
-    position: absolute;
-    text-align: center;
-    font-weight: 500;
-    color: red;
-    display: block;
-    margin-left: 36%;
-    padding: 3px;
-    margin-top:390px;
-    
-}
-.handel_error_connection{
-    border-radius: 10px 10px 0px 0px;
-    width:500px;
-    position: absolute;
-    text-align: center;
-    font-weight: 500;
-    color: red;
-    display: block;
-    margin-left: 305px;
-    padding: 3px;
-    margin-top:60px;
-    background-color: burlywood;
-    
-}
-    .warning{
-    border-radius: 10px 10px 0px 0px;
-    width: 29.333%;
-    position: absolute;
-    text-align: center;
-    font-weight: 500;
-    font-size: 18px;
-    color: red;
-    display: block;
-    margin-left: 35.333%;
-    padding: 3px;
-    margin-top: 5%;
-    
-}
+            border-radius: 10px 10px 0px 0px;
+            width:400px;
+            position: absolute;
+            text-align: center;
+            font-weight: 500;
             
+            color: red;
+            display: block;
+            margin-left: 33%;
+            padding: 3px;
+            margin-top:110px;
+                
+            }
+            .lastname{
+                border-radius: 10px 10px 0px 0px;
+                width:400px;
+                position: absolute;
+                text-align: center;
+                font-weight: 500;
+                color: red;
+                display: block;
+                margin-left: 32.5%;
+                padding: 3px;
+                margin-top:182px;
+                
+            }
+            .phonenumber{
+                border-radius: 10px 10px 0px 0px;
+                width:400px;
+                position: absolute;
+                text-align: center;
+                font-weight: 500;
+                color: red;
+                display: block;
+                margin-left: 36%;
+                padding: 3px;
+                margin-top:321px;
+                
+            }
+            .password{
+                border-radius: 10px 10px 0px 0px;
+                width:500px;
+                position: absolute;
+                text-align: center;
+                font-weight: 500;
+                color: red;
+                display: block;
+                margin-left: 36%;
+                padding: 3px;
+                margin-top:390px;
+                
+            }
+            .handel_error_connection{
+                border-radius: 10px 10px 0px 0px;
+                width:500px;
+                position: absolute;
+                text-align: center;
+                font-weight: 500;
+                color: red;
+                display: block;
+                margin-left: 305px;
+                padding: 3px;
+                margin-top:60px;
+                background-color: burlywood;
+                
+            }
+                .warning{
+                border-radius: 10px 10px 0px 0px;
+                width: 29.333%;
+                position: absolute;
+                text-align: center;
+                font-weight: 500;
+                font-size: 18px;
+                color: red;
+                display: block;
+                margin-left: 35.333%;
+                padding: 3px;
+                margin-top: 5%;
+                
+            }
+                
         </style>
 </head>
 <body class="ahmed">
@@ -239,22 +254,22 @@
     <div class="the-big-one">
         <form  method="post">
             <h1 class="Registration">Registration</h1>
-            <p class="pragraph">Create your account it is takes a minute </p>
+            <p class="pragraph">Create your account it takes a minute </p>
 	<hr class="mb-3">
-        <label for="firstname" class="text"><b>First Name</b></label>
-	<input class="form-control" id="firstname" type="text" name="firstname" required>
+        <label for="firstname" class="text" ><b>First Name</b></label>
+	<input class="form-control" id="firstname" type="text" name="firstname" placeholder="First Name.." required>
 
 	<label for="lastname"  class="text" ><b>Last Name</b></label>
-	<input class="form-control" id="lastname"  type="text" name="lastname" required>
+	<input class="form-control" id="lastname"  type="text" name="lastname" placeholder="Last Name.." required>
 
 	<label for="email"  class="text" ><b>Email Address</b></label>
-        <input class="form-control" id="email"  type="email" name="email" required>
+        <input class="form-control" id="email"  type="email" name="email" placeholder="Email.." required>
 
         <label for="phonenumber" class="text" ><b>Phone Number</b></label>
-	<input class="form-control" id="phonenumber"  type="text" name="phonenumber" required>
+	<input class="form-control" id="phonenumber"  type="text" name="phonenumber" placeholder="Phone Number.." required>
 
 	<label for="password" class="text" ><b>Password</b></label>
-	<input class="form-control" id="password"  type="password" name="password" required>
+	<input class="form-control" id="password"  type="password" name="password" placeholder="Password.." required>
 	<hr class="mb-3">
         <input class="btn btn-primary" type="submit" id="register" name="create" value="Sign Up">
 	</form>
