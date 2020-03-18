@@ -1,5 +1,5 @@
 <?php
-   
+   ob_start();
     session_start();
 
     require'db_conn.php';
@@ -9,7 +9,6 @@
 
  
 ?>
-<!DOCTYPE html>
 <html>
 <head>
 	<title>Registration Form</title>
@@ -229,7 +228,7 @@
                         $role = $row['role'];
                         if($role == 0)
                         {
-                            header("Location: index.php");
+                            header("Location:index.php");
                         }
                         else
                         {
@@ -247,7 +246,7 @@
     }
        
     
-           
+     ob_end_flush();      
 	?>
 </div>
 
