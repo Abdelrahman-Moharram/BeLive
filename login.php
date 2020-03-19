@@ -21,7 +21,9 @@
             if($role == 0)
             {
                 header("Location: index.php");
-            }
+                if($role == 1)
+                {                    header("Location: UserProfile.php");
+            }}
             else
             {
                 header("Location: admin.php");

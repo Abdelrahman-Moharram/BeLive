@@ -1,6 +1,8 @@
 
 <?php 
-include 'processform.php';
+    session_start();
+    require 'db_conn.php';
+   // if(isset($_POST['save-user']))
 ?>
 
 <html>
@@ -36,26 +38,28 @@ include 'processform.php';
 .main_contain{
     padding: 20px ;
 }
+.main_contain .btn-block .a{
+    color: white;
+    width: 30%;
+    
+}
 
     </style>
     <body>
         
+        
+        
         <div class="Container">
             <div class="row">
                 <div class="col-4 offset-md-4 form-div">
-                    <form action="pofils.html"method="post"enctype="multipart/form-data">
+                    <form action="UserProfile.php" method="post"enctype="multipart/form-data">
+                    <?php echo '<h3 class="text-center">' .$_SESSION['firstname']." ".$_SESSION['lastname'].'</h3>'; ?>
                         
-                        <h3 class="text-center">Profile</h3>
-                        
-                        <?php if(!empty($msg)): ?>
-                        <div class="alert <?php echo $css_class;?> " >
-                            <?php echo $msg;?>
-                        </div>
-                        <?php endif;?>
                         <div class="form-group text-center">
                             <img src="images/placeholder.png" onclick="triggerClick() "id="profileDisplay"/>
-                            <label for="ProfileIamge" >Profile Image</label>
+                            <label for="ProfileIamge" > </label>
                             <input type="file" name="profileImage" onchange="displayImage(this)"  id="profileImage" style="display: none">
+                            
                         </div>
                     
                         <div class="form-group">
@@ -66,9 +70,12 @@ include 'processform.php';
                 <div class="main_contain">
                     <hr>
                   <!--   <i class="fa fa-briefcase info"></i> -->
-                     <i class="fa fa-envelope info"></i>
+                   <?php echo'<i class="fa fa-envelope info">'." ".$_SESSION['email'].'</i>'; ?>
                      <br>
-                     <i class="fa fa-phone info"></i>
+                    <?php echo '<i class="fa fa-phone info">'." ".$_SESSION['phonenumber'].'</i>'; ?>
+                     <hr>
+                     <button type="submit" name="Home" class="btn btn-primary btn-block"> <a class="a" href="index.php">Home</a></button>
+                   
                    
                 </div>
             

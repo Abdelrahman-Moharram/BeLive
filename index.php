@@ -116,7 +116,7 @@
               if(isset($_SESSION['email']))
               {
                   echo'<li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#team">'.$_SESSION['firstname'].'</a>
+              <a class="nav-link js-scroll-trigger" href="UserProfile.php">'.$_SESSION['firstname'].'</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="logout.php">Logout</a>
@@ -133,7 +133,7 @@
               <a class="nav-link js-scroll-trigger" href="registration.php">signup</a>
             </li>';
                   
-              }  
+              }
               ?>
               
           </ul>
