@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 07, 2020 at 04:55 AM
+-- Generation Time: May 17, 2020 at 10:35 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.5
 
@@ -29,7 +29,10 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `complaint` (
   `id` int(10) NOT NULL,
-  `description` varchar(100) NOT NULL,
+  `detail` varchar(100) NOT NULL,
+  `title` varchar(20) NOT NULL,
+  `time` time NOT NULL,
+  `seen` tinyint(1) NOT NULL,
   `FK_USER` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -42,7 +45,6 @@ CREATE TABLE `complaint` (
 CREATE TABLE `offer` (
   `id` int(10) NOT NULL,
   `percentage` float NOT NULL,
-  `type` varchar(10) NOT NULL,
   `startDate` date NOT NULL,
   `endDate` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -55,6 +57,8 @@ CREATE TABLE `offer` (
 
 CREATE TABLE `service` (
   `id` int(10) NOT NULL,
+  `name` int(20) NOT NULL,
+  `capacity` int(50) NOT NULL,
   `type` varchar(20) NOT NULL,
   `description` varchar(50) NOT NULL,
   `FK_OFFER` int(10) NOT NULL
@@ -86,17 +90,19 @@ CREATE TABLE `user` (
   `email` varchar(50) NOT NULL,
   `phonenumber` varchar(11) NOT NULL,
   `balance` float NOT NULL,
-  `password` varchar(20) NOT NULL
+  `password` varchar(20) NOT NULL,
+  `internetService` varchar(50) NOT NULL,
+  `callService` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `firstname`, `lastname`, `image`, `role`, `email`, `phonenumber`, `balance`, `password`) VALUES
-(3, 'Aida', 'Ali', '', 0, 'aida1@gmail.com', '01454311204', 0, '147'),
-(5, 'Nour', 'Saleh', '', 0, 'noursalehothman96@gmail.com', '01494666445', 0, '123'),
-(8, 'ggg', 'hhh', '', 0, 'noursale4@gmail.com', '01452369632', 0, '123');
+INSERT INTO `user` (`id`, `firstname`, `lastname`, `image`, `role`, `email`, `phonenumber`, `balance`, `password`, `internetService`, `callService`) VALUES
+(3, 'Aida', 'Ali', '', 0, 'aida1@gmail.com', '01454311204', 0, '147', '', ''),
+(5, 'Nour', 'Saleh', '', 0, 'noursalehothman96@gmail.com', '01494666445', 0, '123', '', ''),
+(8, 'ggg', 'hhh', '', 0, 'noursale4@gmail.com', '01452369632', 0, '123', '', '');
 
 -- --------------------------------------------------------
 
