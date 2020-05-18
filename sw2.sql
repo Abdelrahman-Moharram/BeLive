@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 18, 2020 at 10:36 PM
+-- Generation Time: May 18, 2020 at 10:42 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.5
 
@@ -57,7 +57,7 @@ CREATE TABLE `offer` (
 
 CREATE TABLE `service` (
   `id` int(10) NOT NULL,
-  `name` int(20) NOT NULL,
+  `name` varchar(20) NOT NULL,
   `capacity` int(50) NOT NULL,
   `type` varchar(20) NOT NULL,
   `description` varchar(50) NOT NULL,
@@ -69,7 +69,7 @@ CREATE TABLE `service` (
 --
 
 INSERT INTO `service` (`id`, `name`, `capacity`, `type`, `description`, `FK_OFFER`) VALUES
-(1, 0, 500, 'Phone and net', 'value5', NULL);
+(1, '0', 500, 'Phone and net', 'value5', NULL);
 
 -- --------------------------------------------------------
 
