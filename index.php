@@ -160,8 +160,8 @@
                 <div class="col-md-6">
                     <div class="message-box">                        
                         <h2>Welcome to BeLive</h2>
-                        <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum. Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed vitae rutrum neque. Ut id erat sit amet libero bibendum aliquam. Donec ac egestas libero, eu bibendum risus. Phasellus et congue justo. </p>
-						<p>Sed vitae rutrum neque. Ut id erat sit amet libero bibendum aliquam. Donec ac egestas libero, eu bibendum risus. Phasellus et congue justo.</p>
+                        <p> Hello and welcome to our distinguished site, be alive and it is the main thing that is customer service and how to save them from going to the end of the branches so please log in with the company phone number and your email so that you can see all your existing information and how to amend it. </p>
+						<p>We hope that you will listen to the site and have achieved what it aims to</p>
 
                         
                     </div><!-- end messagebox -->
@@ -191,11 +191,7 @@
                 <div class="footer-center">
                     <p class="footer-links">
                         <a href="#">Home</a>
-                        <a href="#">Blog</a>
-                        <a href="#">Pricing</a>
                         <a href="#">About</a>
-                        <a href="#">Faq</a>
-                        <a href="#">Contact</a>
                     </p>
                     <p class="footer-company-name">All Rights Reserved. &copy; 2020 <a href="#">BeLive</a></p>
                 </div>
