@@ -8,7 +8,7 @@ $del = mysqli_query($connect,"delete from service where id = '$id'"); // delete 
 if($del)
 {
     mysqli_close($connect); // Close connection
-    header("location:services.php"); // redirects to all records page
+    header("location:service.php"); // redirects to all records page
     exit;	
 }
 else

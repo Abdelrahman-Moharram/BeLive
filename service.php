@@ -1,3 +1,10 @@
+<?php
+
+    session_start();
+    require 'db_conn.php';
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,8 +25,9 @@
 
 
         .service {
-            width: 400px;
-            height: 250px;
+        	align-content: center;
+            width: 950px;
+            height: 700px;
             background: #333333;
             color: #fff;
             top: 50%;
@@ -40,7 +48,7 @@ width: 100%;
 	background: #cccccc;
 	outline: none;
 	height: 40px;
-	color: #fff;
+	color: black;
 	font-size: 16px;
 }
 .image {
@@ -54,12 +62,12 @@ width: 100%;
 .service{
 	opacity: 1;
 }
-.service td{
+.tdd{
 	width: 50%;
 	margin-bottom: 30px;
 	padding: 5px;
 }
-.service td[type="text"]
+.tdd
 {
     border: 1px solid powderblue;
     padding: 10px;
@@ -70,7 +78,7 @@ width: 100%;
 	color: #fff;
 	font-size: 16px;
 
-}u
+}
 	</style>
 </head>
 <body style="background-image: url(images/449916.jpg);">
@@ -78,38 +86,41 @@ width: 100%;
 	<div class="service">
 		<br>
 		<a href="index.php" style="width:100%; height:30px;margin:20px;"><img src="uploads/logo.png" width="150px" style="margin-top:10px;margin-bottom:30px;"></a>
-	<?php
-	$name ="phone and net";
-	$capacity="500";
-	$type="value4";
-	$description="null";
-	?>
-<table cellpadding="20" border="2" align="center">
 
-<tr>
-	<td>id</td>
-	<td>name</td>
-	<td>capacity</td>
-	<td>type</td>
-	<td>description</td>
 
-</tr>
-<tr>
-	<td>1</td>
-<td>
-	<?php  echo$name;?>
-</td>
-<td>
-	<?php  echo$capacity;?>
-</td>
-<td>
-	<?php  echo$type;?>
-</td>
-<td>
-	<?php  echo$description;?>
-</td>
-</tr>
-</table>
+
+<?php
+			$result = mysqli_query($connect,"SELECT * FROM service");
+
+			echo "<table cellpadding='20' border='2' align='center'>
+			<tr>
+			<th>Id</th>
+			<th>Name</th>
+			<th>Capacity</th>
+			<th>Type</th>
+			<th>Description</th>
+			<th>EDIT</th>
+			<th>DELETION</th>
+			</tr>";
+
+			while($row = mysqli_fetch_array($result))
+			{
+			echo "<tr>";
+			echo "<td class='tdd'>" . $id = $row['id'] . "</td>";
+			echo "<td class='tdd'>" . $row['name'] . "</td>";
+			echo "<td class='tdd'>" . $row['capacity'] . "</td>";
+			echo "<td class='tdd'>" . $row['type'] . "</td>";
+			echo "<td class='tdd'>" . $row['description'] . "</td>";
+			echo "<td class='tdd'><a href='edit.php?id=".$row['id']."'>EDIT</a></td>";
+			echo "<td class='tdd'><a href='delete.php?id=".$row['id']."'>DELETE</a></td>";
+			echo "</tr>";
+			}
+			
+			echo "</table>";
+                echo "  <a href='insertService.html'>INSERT NEW SERVICE</a>";
+			mysqli_close($connect);
+		?>
+
 </div>
 </body>
 </html>

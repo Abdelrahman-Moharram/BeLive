@@ -16,6 +16,6 @@
 
     <body>
         <h1>welcome admin</h1>
-        <a href="services.php">services</a>
+        <a href="service.php">services</a>
     </body>
 </html>
