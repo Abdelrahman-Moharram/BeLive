@@ -101,19 +101,11 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#about">About Us</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio">Offers</a>
-            </li>
+            
+            
 <!---->
-			<li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#pricing">Pricing</a>
-            </li>
-			<li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contect Us</a>
-            </li>
+			
+			
               <?php
               if(isset($_SESSION['email']))
               {
@@ -168,10 +160,10 @@
                 <div class="col-md-6">
                     <div class="message-box">                        
                         <h2>Welcome to BeLive</h2>
-                        <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum. Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed vitae rutrum neque. Ut id erat sit amet libero bibendum aliquam. Donec ac egestas libero, eu bibendum risus. Phasellus et congue justo. </p>
-						<p>Sed vitae rutrum neque. Ut id erat sit amet libero bibendum aliquam. Donec ac egestas libero, eu bibendum risus. Phasellus et congue justo.</p>
+                        <p> Hello and welcome to our distinguished site, be alive and it is the main thing that is customer service and how to save them from going to the end of the branches so please log in with the company phone number and your email so that you can see all your existing information and how to amend it. </p>
+						<p>We hope that you will listen to the site and have achieved what it aims to</p>
 
-                        <a href="#" class="sim-btn hvr-bounce-to-top"><span>Contact Us</span></a>
+                        
                     </div><!-- end messagebox -->
                 </div><!-- end col -->
 
@@ -184,351 +176,13 @@
         </div><!-- end container -->
     </div><!-- end section -->
 	
-    <div id="services" class="section lb">
-        <div class="container">
-            <div class="section-title text-center">
-                <h3>Services</h3>
-                <p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus.</p>
-            </div><!-- end title -->
 
-            <div class="row">
-                
-				<div class="col-md-4">
-                    <div class="services-inner-box">
-						<div class="ser-icon">
-							<i class="flaticon-seo"></i>
-						</div>
-						<h2>Phone Services</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-                </div><!-- end col -->
-                <div class="col-md-4">
-                    <div class="services-inner-box">
-						<div class="ser-icon">
-							<i class="flaticon-development"></i>
-						</div>
-						<h2>Cellular Data</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-                </div><!-- end col -->
-				<div class="col-md-4">
-                    <div class="services-inner-box">
-						<div class="ser-icon">
-							<i class="flaticon-process"></i>
-						</div>
-						<h2>Reliability</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-                </div><!-- end col -->
-				<div class="col-md-4">
-                    <div class="services-inner-box">
-						<div class="ser-icon">
-							<i class="flaticon-discuss-issue"></i>
-						</div>
-						<h2>Best Service</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-                </div><!-- end col -->
-				<div class="col-md-4">
-                    <div class="services-inner-box">
-						<div class="ser-icon">
-							<i class="flaticon-idea"></i>
-						</div>
-						<h2>Support</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-                </div><!-- end col -->
-				<!--<div class="col-md-4">
-                    <div class="services-inner-box">
-						<div class="ser-icon">
-							<i class="flaticon-idea-1"></i>
-						</div>
-						<h2>Best Service</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-                </div>--><!-- end col -->
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </div><!-- end section -->
-	
-	<div id="portfolio" class="section lb">
-		<div class="container">
-			<div class="section-title text-center">
-                <h3>Offers</h3>
-                <p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus.</p>
-            </div><!-- end title -->
-			
-			<div class="gallery-menu row">
-				<div class="col-md-12">
-					<div class="button-group filter-button-group text-center">
-						<button class="active" data-filter="*">All</button>
-						<button data-filter=".gal_a">Calling</button>
-						<button data-filter=".gal_b">Cellular</button>
-						<button data-filter=".gal_c">Internet Modem</button>
-					</div>
-				</div>
-			</div>
-			
-            
-            
-            <div class="gallery-list row">
-			  <a href="#">
-                  <div class="col-md-4 col-sm-6 gallery-grid gal_a gal_b">
-					<div class="gallery-single fix">
-						<img src="uploads/19301978.jpg" class="img-fluid" alt="Image" >
-						<div class="img-overlay">
-                            <p class="headerOfer">Connect +</p>
-							<div class="ofers">
-                                <ul>
-                                    <li class="ofer">1200 flex</li>
-                                    <li class="ofer">8 Gigabyte</li>
-                                    <li class="ofer">50 L.E/month</li>
-                                </ul>
-                            </div>
-						</div><!--<a href="#" class="link_on_image" style="margin-left: 140px; font-family:arial;">Get Offer</a>-->
-					</div>
-				</div>
-               </a> 
-                
-                
-                
-				<a href="#">
-                  <div class="col-md-4 col-sm-6 gallery-grid gal_b">
-					<div class="gallery-single fix">
-						<img src="uploads/onliner.png" class="img-fluid" alt="Image" >
-						<div class="img-overlay">
-                            <p class="headerOfer">Onliner</p>
-							<div class="ofers">
-                                <ul>
-                                    <li class="ofer">unlimted internet</li>
-                                    <li class="ofer">4 mbps</li>
-                                    <li class="ofer">50 L.E/month</li>
-                                </ul>
-                            </div>
-						</div><!--<a href="#" class="link_on_image" style="margin-left: 140px; font-family:arial;">Get Offer</a>-->
-					</div>
-				</div>
-               </a> 
-				
-                
-                <a href="#">
-                  <div class="col-md-4 col-sm-6 gallery-grid gal_a gal_b">
-					<div class="gallery-single fix">
-						<img src="uploads/2382356.jpg" class="img-fluid" alt="Image" >
-						<div class="img-overlay">
-                            <p class="headerOfer">Connect +</p>
-							<div class="ofers">
-                                <ul>
-                                    <li class="ofer">1200 flex</li>
-                                    <li class="ofer">8 Gigabyte</li>
-                                    <li class="ofer">50 L.E/month</li>
-                                </ul>
-                            </div>
-						</div><!--<a href="#" class="link_on_image" style="margin-left: 140px; font-family:arial;">Get Offer</a>-->
-					</div>
-				</div>
-               </a> 
-                
-                
-                <a href="#">
-                  <div class="col-md-4 col-sm-6 gallery-grid gal_a gal_b">
-					<div class="gallery-single fix">
-						<img src="uploads/chat-icon-sms-icon-call-chat-bubble-comments-icon-communication-talk-icon-speech-bubbles-icon-vector-flat-design-chat-icon-sms-148080413.jpg" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-                            <p class="headerOfer">Connect +</p>
-							<div class="ofers">
-                                <ul>
-                                    <li class="ofer">1200 flex</li>
-                                    <li class="ofer">8 Gigabyte</li>
-                                    <li class="ofer">50 L.E/month</li>
-                                </ul>
-                            </div>
-						</div><!--<a href="#" class="link_on_image" style="margin-left: 140px; font-family:arial;">Get Offer</a>-->
-					</div>
-				</div>
-               </a> 
-				
-                
-                <a href="#">
-                  <div class="col-md-4 col-sm-6 gallery-grid gal_a gal_b">
-					<div class="gallery-single fix">
-						<img src="uploads/01d0e380810886bbf2739ac8f4fb4179.png" class="img-fluid" alt="Image" >
-						<div class="img-overlay">
-                            <p class="headerOfer">Connect +</p>
-							<div class="ofers">
-                                <ul>
-                                    <li class="ofer">1200 flex</li>
-                                    <li class="ofer">8 Gigabyte</li>
-                                    <li class="ofer">50 L.E/month</li>
-                                </ul>
-                            </div>
-						</div><!--<a href="#" class="link_on_image" style="margin-left: 140px; font-family:arial;">Get Offer</a>-->
-					</div>
-				</div>
-               </a> 
-                
-		<a href="#">
-                  <div class="col-md-4 col-sm-6 gallery-grid gal_a gal_b">
-					<div class="gallery-single fix">
-						<img src="uploads/istockphoto-492405209-1024x1024.jpg" class="img-fluid" alt="Image" >
-						<div class="img-overlay">
-                            <p class="headerOfer">Connect +</p>
-							<div class="ofers">
-                                <ul>
-                                    <li class="ofer">1200 flex</li>
-                                    <li class="ofer">8 Gigabyte</li>
-                                    <li class="ofer">50 L.E/month</li>
-                                </ul>
-                            </div>
-						</div><!--<a href="#" class="link_on_image" style="margin-left: 140px; font-family:arial;">Get Offer</a>-->
-					</div>
-				</div>
-               </a> 
-			</div>
-			</div>
-		</div>
 	
 	
 	
 	
-	<div id="pricing" class="section lb">
-		<div class="container">
-			<div class="section-title text-center">
-                <h3>Pricing</h3>
-                <p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus.</p>
-            </div><!-- end title -->
-			
-			<div class="row">
-                <div class="col-md-4 col-sm-6">
-                    <div class="pricingTable">
-                        <svg x="0" y="0" viewBox="0 0 360 220">
-                            <g>
-                                <path fill="#28a9e2" d="M0.732,193.75c0,0,29.706,28.572,43.736-4.512c12.976-30.599,37.005-27.589,44.983-7.061
-                                    c8.09,20.815,22.83,41.034,48.324,27.781c21.875-11.372,46.499,4.066,49.155,5.591c6.242,3.586,28.729,7.626,38.246-14.243
-                                    s27.202-37.185,46.917-8.488c19.715,28.693,38.687,13.116,46.502,4.832c7.817-8.282,27.386-15.906,41.405,6.294V0H0.48
-                                    L0.732,193.75z"></path>
-                            </g>
-                            <text transform="matrix(1 0 0 1 69.7256 116.2686)" fill="#fff" font-size="78.4489">$10</text>
-                            <text transform="matrix(0.9566 0 0 1 197.3096 83.9121)" fill="#fff" font-size="29.0829">.99</text>
-                            <text transform="matrix(1 0 0 1 233.9629 115.5303)" fill="#fff" font-size="15.4128">/Month</text>
-                        </svg>
-                        <div class="pricing-content">
-                            <h3 class="title">Standard</h3>
-                            <ul class="pricing-content">
-                                <li><b>50GB</b> Disk Space</li>
-                                <li><b>50</b> Email Accounts</li>
-                                <li><b>50GB</b> Bandwidth</li>
-                                <li><b>10</b> Subdomains</li>
-                                <li><b>15</b> Domains</li>
-                            </ul>
-                            <a href="#" class="sim-btn hvr-bounce-to-top pricingTable-signup">Buy Now</a>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-md-4 col-sm-6">
-                    <div class="pricingTable blue">
-                        <svg x="0" y="0" viewBox="0 0 360 220">
-                            <g>
-                                <path fill="#28a9e2" d="M0.732,193.75c0,0,29.706,28.572,43.736-4.512c12.976-30.599,37.005-27.589,44.983-7.061
-                                    c8.09,20.815,22.83,41.034,48.324,27.781c21.875-11.372,46.499,4.066,49.155,5.591c6.242,3.586,28.729,7.626,38.246-14.243
-                                    s27.202-37.185,46.917-8.488c19.715,28.693,38.687,13.116,46.502,4.832c7.817-8.282,27.386-15.906,41.405,6.294V0H0.48
-                                    L0.732,193.75z"></path>
-                            </g>
-                            <text transform="matrix(1 0 0 1 69.7256 116.2686)" fill="#fff" font-size="78.4489">$20</text>
-                            <text transform="matrix(0.9566 0 0 1 197.3096 83.9121)" fill="#fff" font-size="29.0829">.99</text>
-                            <text transform="matrix(1 0 0 1 233.9629 115.5303)" fill="#fff" font-size="15.4128">/Month</text>
-                        </svg>
-                        <div class="pricing-content">
-                            <h3 class="title">Business</h3>
-                            <ul class="pricing-content">
-                                <li><b>60GB</b> Disk Space</li>
-                                <li><b>60</b> Email Accounts</li>
-                                <li><b>60GB</b> Bandwidth</li>
-                                <li><b>15</b> Subdomains</li>
-                                <li><b>20</b> Domains</li>
-                            </ul>
-                            <a href="#" class="sim-btn hvr-bounce-to-top pricingTable-signup">Buy Now</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-sm-6">
-                    <div class="pricingTable red">
-                        <svg x="0" y="0" viewBox="0 0 360 220">
-                            <g>
-                                <path fill="#28a9e2" d="M0.732,193.75c0,0,29.706,28.572,43.736-4.512c12.976-30.599,37.005-27.589,44.983-7.061
-                                    c8.09,20.815,22.83,41.034,48.324,27.781c21.875-11.372,46.499,4.066,49.155,5.591c6.242,3.586,28.729,7.626,38.246-14.243
-                                    s27.202-37.185,46.917-8.488c19.715,28.693,38.687,13.116,46.502,4.832c7.817-8.282,27.386-15.906,41.405,6.294V0H0.48
-                                    L0.732,193.75z"></path>
-                            </g>
-                            <text transform="matrix(1 0 0 1 69.7256 116.2686)" fill="#fff" font-size="78.4489">$30</text>
-                            <text transform="matrix(0.9566 0 0 1 197.3096 83.9121)" fill="#fff" font-size="29.0829">.99</text>
-                            <text transform="matrix(1 0 0 1 233.9629 115.5303)" fill="#fff" font-size="15.4128">/Month</text>
-                        </svg>
-                        <div class="pricing-content">
-                            <h3 class="title">Premium</h3>
-                            <ul class="pricing-content">
-                                <li><b>70GB</b> Disk Space</li>
-                                <li><b>70</b> Email Accounts</li>
-                                <li><b>70GB</b> Bandwidth</li>
-                                <li><b>20</b> Subdomains</li>
-                                <li><b>25</b> Domains</li>
-                            </ul>
-                            <a href="#" class="sim-btn hvr-bounce-to-top pricingTable-signup">Buy Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-			
-		</div>
-	</div>
-
-    <div id="contact" class="section db">
-        <div class="container">
-            <div class="section-title text-center">
-                <h3>Contact</h3>
-                <p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus.</p>
-            </div><!-- end title -->
-
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="contact_form">
-                        <div id="message"></div>
-                        <form id="contactForm" name="sentMessage" novalidate="novalidate">
-							<div class="row">
-								<div class="col-md-6">
-									<div class="form-group">
-										<input class="form-control" id="name" type="text" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name." maxlength="50">
-										<p class="help-block text-danger"></p>
-									</div>
-									<div class="form-group">
-										<input class="form-control" id="email" type="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email address." maxlength="50">
-										<p class="help-block text-danger"></p>
-									</div>
-									<div class="form-group">
-										<input class="form-control" id="phone" type="tel" placeholder="Your Phone" required="required" data-validation-required-message="Please enter your phone number." maxlength="30">
-										<p class="help-block text-danger"></p>
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="form-group">
-										<textarea class="form-control" id="message" placeholder="Your Message" required="required" data-validation-required-message="Please enter a message." maxlength="500"></textarea>
-										<p class="help-block text-danger"></p>
-									</div>
-								</div>
-								<div class="clearfix"></div>
-								<div class="col-lg-12 text-center">
-									<div id="success"></div>
-									<button id="sendMessageButton" class="sim-btn hvr-bounce-to-top" type="submit">Send Message</button>
-								</div>
-							</div>
-						</form>
-                    </div>
-                </div><!-- end col -->
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </div><!-- end section -->
+    
 
     <div class="copyrights">
         <div class="container">
@@ -537,11 +191,7 @@
                 <div class="footer-center">
                     <p class="footer-links">
                         <a href="#">Home</a>
-                        <a href="#">Blog</a>
-                        <a href="#">Pricing</a>
                         <a href="#">About</a>
-                        <a href="#">Faq</a>
-                        <a href="#">Contact</a>
                     </p>
                     <p class="footer-company-name">All Rights Reserved. &copy; 2020 <a href="#">BeLive</a></p>
                 </div>
