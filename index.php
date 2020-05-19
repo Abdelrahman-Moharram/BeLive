@@ -1,6 +1,8 @@
 <?php 
 
     session_start();
+     require 'db_conn.php';
+
 
 
 ?>
@@ -190,6 +192,7 @@
             </div><!-- end title -->
 
             <div class="row">
+                
 				<div class="col-md-4">
                     <div class="services-inner-box">
 						<div class="ser-icon">
