@@ -206,6 +206,14 @@
 
 
         }
+        .surprize
+        {
+
+            font-size:30px;
+            color: red;
+
+
+        }
     
         
     </style>
@@ -230,9 +238,19 @@
                            
                             $get_news_sql = "SELECT name FROM `service` where id =1";
             $get_news_sql = mysqli_query($connect, $get_news_sql);
-            while ($row = mysqli_fetch_array($get_news_sql)) {
+            if($row = mysqli_fetch_array($get_news_sql)) {
                         echo $row['name'];
                     }
+        else
+        {
+
+            echo'<div class="surprize">this service is updating now </div>';
+
+        }
+            
+
+
+            
                             ?>
                 </div>
 		<!----------------------------------------------------------->		
@@ -243,7 +261,7 @@
                            
                     $get_news_sql = "SELECT description  FROM `service` where id =1";
             $get_news_sq2 = mysqli_query($connect, $get_news_sql);
-            while ($row = mysqli_fetch_array($get_news_sq2)) {
+            if ($row = mysqli_fetch_array($get_news_sq2)) {
                         echo $row['description'];
                     }
                             ?>
@@ -262,9 +280,16 @@
                            
                             $get_news_sql = "SELECT name FROM `service` where id =2";
             $get_news_sql = mysqli_query($connect, $get_news_sql);
-            while ($row = mysqli_fetch_array($get_news_sql)) {
+            if($row = mysqli_fetch_array($get_news_sql)) {
                         echo $row['name'];
                     }
+
+                    else
+        {
+
+            echo'<div class="surprize">this service is updating now </div>';
+
+        }
                             ?>
                 </div>
 
@@ -277,7 +302,7 @@
                            
                             $get_news_sql = "SELECT description  FROM `service` where id =2";
             $get_news_sq2 = mysqli_query($connect, $get_news_sql);
-            while ($row = mysqli_fetch_array($get_news_sq2)) {
+            if ($row = mysqli_fetch_array($get_news_sq2)) {
                         echo $row['description'];
                     }
                             ?>
@@ -297,9 +322,15 @@
                            
                             $get_news_sql = "SELECT name FROM `service` where id =3";
             $get_news_sql = mysqli_query($connect, $get_news_sql);
-            while ($row = mysqli_fetch_array($get_news_sql)) {
+            if ($row = mysqli_fetch_array($get_news_sql)) {
                         echo $row['name'];
                     }
+            else
+                      {
+
+            echo'<div class="surprize">this service is updating now </div>';
+
+                     }
                             ?>
                 </div>
         <!----------------------------------------------------------->      
@@ -310,7 +341,7 @@
                            
                             $get_news_sql = "SELECT description  FROM `service` where id =3";
             $get_news_sq2 = mysqli_query($connect, $get_news_sql);
-            while ($row = mysqli_fetch_array($get_news_sq2)) {
+            if ($row = mysqli_fetch_array($get_news_sq2)) {
                         echo $row['description'];
                     }
                             ?>
@@ -331,9 +362,18 @@
                            
                             $get_news_sql = "SELECT name FROM `service` where id =4";
             $get_news_sql = mysqli_query($connect, $get_news_sql);
-            while ($row = mysqli_fetch_array($get_news_sql)) {
+            if($row = mysqli_fetch_array($get_news_sql)) {
                         echo $row['name'];
                     }
+
+            else
+        {
+
+            echo'<div class="surprize">this service is updating now </div>';
+
+        }
+
+
                             ?>
                 </div>
         <!----------------------------------------------------------->      
@@ -344,7 +384,7 @@
                            
                             $get_news_sql = "SELECT description  FROM `service` where id =4";
             $get_news_sq2 = mysqli_query($connect, $get_news_sql);
-            while ($row = mysqli_fetch_array($get_news_sq2)) {
+            if($row = mysqli_fetch_array($get_news_sq2)) {
                         echo $row['description'];
                     }
                             ?>
@@ -365,9 +405,18 @@
                            
                             $get_news_sql = "SELECT name FROM `service` where id =5";
             $get_news_sql = mysqli_query($connect, $get_news_sql);
-            while ($row = mysqli_fetch_array($get_news_sql)) {
+            if($row = mysqli_fetch_array($get_news_sql)) {
                         echo $row['name'];
                     }
+
+        else
+               {
+
+            echo'<div class="surprize">this service is updating now </div>';
+
+               }
+
+
                             ?>
                 </div>
         <!----------------------------------------------------------->      
@@ -378,9 +427,10 @@
                            
                             $get_news_sql = "SELECT description  FROM `service` where id =5";
             $get_news_sq2 = mysqli_query($connect, $get_news_sql);
-            while ($row = mysqli_fetch_array($get_news_sq2)) {
+            if($row = mysqli_fetch_array($get_news_sq2)) {
                         echo $row['description'];
                     }
+
                             ?>
                 </div>  
                         
@@ -401,9 +451,18 @@
                            
                             $get_news_sql = "SELECT name FROM `service` where id =6";
             $get_news_sql = mysqli_query($connect, $get_news_sql);
-            while ($row = mysqli_fetch_array($get_news_sql)) {
+            if($row = mysqli_fetch_array($get_news_sql)) {
                         echo $row['name'];
                     }
+
+
+            else
+        {
+
+            echo'<div class="surprize">this service is updating now </div>';
+
+        }
+
                             ?>
                 </div>
         <!----------------------------------------------------------->      
@@ -414,7 +473,7 @@
                            
                             $get_news_sql = "SELECT description  FROM `service` where id =6";
             $get_news_sq2 = mysqli_query($connect, $get_news_sql);
-            while ($row = mysqli_fetch_array($get_news_sq2)) {
+            if($row = mysqli_fetch_array($get_news_sq2)) {
                         echo $row['description'];
                     }
                             ?>
