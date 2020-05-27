@@ -11,19 +11,31 @@
                 
                 if ($_POST['offertype'] == 'data')
                 {
-                    $_SESSION['bal'] = $_SESSION['bal'] - $_POST['Buynow'];
-                    $query = 'update user set balance="'.$_SESSION['bal'].'",internetService="'.$_POST['offername'].'"  where email="'.$_SESSION['email'].'"';
-                    $result = mysqli_query($connect, $query);
-                    echo $_SESSION['bal'],$_POST['offername'];
-                    
+                    if ($_POST['offername'] != $_SESSION['internetService'])
+                    {
+                        $_SESSION['bal'] = $_SESSION['bal'] - $_POST['Buynow'];
+                        $query = 'update user set balance="'.$_SESSION['bal'].'",internetService="'.$_POST['offername'].'"  where email="'.$_SESSION['email'].'"';
+                        $result = mysqli_query($connect, $query);
+                        $_SESSION['internetService'] = $_POST['offername'];
+                    }
+                    else
+                    {
+                        echo'<h1 class="notenough">already on this offer</h1>';
+                    }
                 }
                 elseif($_POST['offertype'] == 'phone')
                 {
-                    $_SESSION['bal'] = $_SESSION['bal'] - $_POST['Buynow'];
-                    $query = 'update user set balance="'.$_SESSION['bal'].'",callService="'.$_POST['offername'].'"  where email="'.$_SESSION['email'].'"';
-                    $result = mysqli_query($connect, $query);
-                    echo $_SESSION['bal'],$_POST['offername'];
-                    
+                    if ($_POST['offername'] != $_SESSION['callService'])
+                    {
+                        $_SESSION['bal'] = $_SESSION['bal'] - $_POST['Buynow'];
+                        $query = 'update user set balance="'.$_SESSION['bal'].'",callService="'.$_POST['offername'].'"  where email="'.$_SESSION['email'].'"';
+                        $result = mysqli_query($connect, $query);
+                        $_SESSION['callService'] = $_POST['offername'];
+                    }
+                    else
+                    {
+                        echo'<h1 class="notenough">already on this offer</h1>';
+                    }
                 }
             }
             else
