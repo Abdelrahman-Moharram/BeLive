@@ -12,7 +12,8 @@
         
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         
-        <title>Image preview</title>
+        
+        <title>Profile</title>
         
         
     </head>
@@ -70,10 +71,16 @@
                 <div class="main_contain">
                     <hr>
                   <!--   <i class="fa fa-briefcase info"></i> -->
-                   <?php echo'<i class="fa fa-envelope info">'." ".$_SESSION['email'].'</i>'; ?>
+                    <?php echo'<i class="fa fa-envelope info">'." ".$_SESSION['email'].'</i>'; ?>
                      <br>
                     <?php echo '<i class="fa fa-phone info">'." ".$_SESSION['phonenumber'].'</i>'; ?>
-                     <hr>
+                     <br>
+                    <?php echo '<i class="fa fa-shield fa-rotate-270 info">'." ".$_SESSION['callService'].'</i>'; ?>
+                     <br>
+                    <?php echo '<i class="fa fa-shield fa-rotate-270 info">'." ".$_SESSION['internetService'].'</i>'; ?>
+                     <br>  
+                    <?php echo '<i class="fa fa-shield fa-rotate-270 info">'." ".$_SESSION['balance'].'</i>'; ?>
+                     <hr>  
                      <button type="submit" name="Home" class="btn btn-primary btn-block"> <a class="a" href="index.php">Home</a></button>
                    
                    

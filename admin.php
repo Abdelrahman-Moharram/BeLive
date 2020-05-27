@@ -29,7 +29,7 @@
     <aside class="left-sidebar">
         <div class="logo">
             <a href="#welcome">
-                <img src="img/logo.ico" alt="">
+                <img src="images/logo.ico" alt="">
             </a>
         </div>
         <nav class="left-nav">
@@ -83,7 +83,7 @@
             <section id="installation">
                 <div class="content-header">
 
-                    <h2 style="width:50%;background:#4a8cdb ;color: black; border-radius: 20px;height: 20px;padding: 25px;margin: 0px;" class="title">View Informations Of Users</h2>
+                    <h1 style="width:50%;background:#4a8cdb ;color: black; border-radius: 20px;height: 20px;padding: 25px;margin: 0px;" class="title">View Informations Of Users</h1>
 
 
                 </div>
@@ -92,7 +92,7 @@
                 <div class="section-content">
 
                     <ul>
-                        <li><code><a href="viewdata.php">View Info  </a></code></li>
+                        <li><code><a href="manage-users.php">View Info  </a></code></li>
 
                     </ul>
                 </div>
