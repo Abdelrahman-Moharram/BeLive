@@ -343,7 +343,7 @@
             $get_news_sq2 = mysqli_query($connect, $get_news_sql);
             if ($row = mysqli_fetch_array($get_news_sq2)) {
                         echo $row['description'];
-                    }
+                    } 
                             ?>
                 </div>
 

@@ -12,6 +12,10 @@ if (isset($_POST['submit'])) {
         $_SESSION['firstname'] = $row['firstname'];
         $_SESSION['lastname'] = $row['lastname'];
         $_SESSION['phonenumber'] = $row['phonenumber'];
+        $_SESSION['bal'] = $row['balance'];
+        $_SESSION['internetService'] = $row['internetService'];
+        $_SESSION['callService'] = $row['callService'];
+        
         $role = $row['role'];
 
 
