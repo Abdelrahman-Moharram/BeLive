@@ -75,12 +75,8 @@
 </head>
 <body id="page-top" class="politics_version">
 
-<<<<<<< HEAD
-=======
-    <!-- LOADER -->
-    
+ 
 	
->>>>>>> 811d9c58342a0e159f4299b9f0c0df2adf31fe8c
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
