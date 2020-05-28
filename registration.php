@@ -180,7 +180,7 @@
         }
         else if(!preg_match("/^([0][1][4][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9])$/",$_POST['phonenumber']))
         {
-           echo'<div class="phonenumber">The phone number incorrect</div>';
+           echo'<div class="phonenumber">The phone number should start with 014</div>';
         }
         else if(!preg_match("/^([a-z]|[A-Z]|[0-9])+$/",$_POST['password']))
         {
