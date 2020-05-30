@@ -101,7 +101,7 @@
 </head>
 <body>
     
-      <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color:#1f1f1f;">
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color:#fff;">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="index.php">
 			<img class="img-fluid" width="200px" style="" src="uploads/logo.png" alt=""  />

@@ -281,5 +281,23 @@
         ?>
     </div>
     
+    
+    
+    <div class="copyrights" style="margin-top:60px;">
+        <div class="container">
+            <div class="footer-distributed">
+				<a href="#"><img src="uploads/logo.png" width="200px" alt="" /></a>
+                <div class="footer-center">
+                    <p class="footer-links">
+                        <a href="#">Home</a>
+                        <a href="#">About</a>
+                    </p>
+                    <p class="footer-company-name">All Rights Reserved. &copy; 2020 <a href="#">BeLive</a></p>
+                </div>
+            </div>
+        </div><!-- end container -->
+    </div><!-- end copyrights -->
+    
+    
     </body>
 </html>
