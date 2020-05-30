@@ -151,7 +151,7 @@
     
     
     
-    <div style="margin-top:40px;">
+    <div style="margin-top:140px;">
         <p style="text-align:center;font-size:80px;font-family:arial;color:#28a9e2">Cellular</p>
     <div class="row" style="width:66%;position:relative;margin-left:17%;margin-top:40px;">
         <br>
