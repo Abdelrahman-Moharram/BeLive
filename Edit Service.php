@@ -151,20 +151,17 @@
     
     
     
-    <div style="margin-top:70px;">
-        <p style="text-align:center;font-size:80px;font-family:arial;color:#28a9e2">Cellular</p>
-         <div style="display:inline-block;margin-left:4%"></div>
+        <p style="text-align:center;font-size:80px;font-family:arial;color:#28a9e2">Services</p>
+    <div style="margin-top:30px;margin-left:10%">
         <?php
         
         
-        for($i = 1; $i <= 6; $i++)
-        {
-            $que = 'select * from service where id = '.$i.'&& type = "data"';
+        $que = 'select * from service';
             $result = mysqli_query($connect, $que);
-            if($row = mysqli_fetch_assoc($result))
-            {
+        while($row = mysqli_fetch_assoc($result) )
+        {
                         
-        ?> <div class="col-md-4 col-sm-6" style="margin-right:3%;display:inline-block;width:28%">
+        ?> <div class="col-md-4 col-sm-6" style="margin-right:3%;display:inline-block;width:28%;margin-top:50px;">
                     
                     <div class="pricingTable">
                         <svg x="0" y="0" viewBox="0 0 360 220">
@@ -201,7 +198,7 @@
         <?php
         }
         
-        }
+        
         
         ?>
         
@@ -220,66 +217,6 @@
     
     
     
-    
-    
-    
-    <div style="margin-top:40px;">
-        <p style="text-align:center;font-size:80px;font-family:arial;color:#28a9e2">Phone</p>
-        
-        <div style="display:inline-block;margin-left:4%"></div>
-        <?php
-        
-        
-        
-        
-        for($i = 1; $i <= 6; $i++)
-        {
-            $que = 'select * from service where id = '.$i.'&& type = "phone"';
-            $result = mysqli_query($connect, $que);
-            if($row = mysqli_fetch_assoc($result))
-            {
-                        
-        ?> <div class="col-md-4 col-sm-6" style="margin-right:3%;display:inline-block;width:28%">
-                    
-                    <div class="pricingTable">
-                        <svg x="0" y="0" viewBox="0 0 360 220">
-                            <g>
-                                <path fill="#28a9e2" d="M0.732,193.75c0,0,29.706,28.572,43.736-4.512c12.976-30.599,37.005-27.589,44.983-7.061
-                                    c8.09,20.815,22.83,41.034,48.324,27.781c21.875-11.372,46.499,4.066,49.155,5.591c6.242,3.586,28.729,7.626,38.246-14.243
-                                    s27.202-37.185,46.917-8.488c19.715,28.693,38.687,13.116,46.502,4.832c7.817-8.282,27.386-15.906,41.405,6.294V0H0.48
-                                    L0.732,193.75z"></path>
-                            </g>
-                            <text transform="matrix(1 0 0 1 69.7256 116.2686)" fill="#fff" font-size="78.4489"><?php echo $row['capacity']; ?></text>
-                            <text transform="matrix(0.9566 0 0 1 197.3096 83.9121)" fill="#fff" font-size="29.0829">.99</text>
-                            <text transform="matrix(1 0 0 1 233.9629 115.5303)" fill="#fff" font-size="15.4128">/Month</text>
-                        </svg>
-                        <div class="pricing-content">
-                            <h3 class="title"><?php echo $row['name']; ?></h3>
-                            <ul class="pricing-content">
-                                <li><b><?php echo $row['description']; ?></b></li>
-                            </ul>
-                            
-                            
-                            <form method="post">
-                                <input value="phone" name="offertype" hidden>
-                                <input value="cellular1" name="offername" hidden>
-                                <button type="submit" class="sim-btn hvr-bounce-to-top pricingTable-signup" value=150 name="Buynow">
-                                BuyNow</button>
-                                
-                                
-                            </form>
-                            
-                        </div>
-                    </div>
-                </div>
-        
-        <?php
-        }
-        
-        }
-        
-        ?>
-    </div>
     
     
     
