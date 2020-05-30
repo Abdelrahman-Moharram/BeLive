@@ -6,6 +6,11 @@
 
         if (isset($_POST['Buynow']))
         {
+            if (!isset($_SESSION['email']))
+            {
+                header('Location: login.php');
+                echo $_SESSION['email'];
+            }
             if ($_SESSION['bal'] >= $_POST['Buynow'])
             {
                 
