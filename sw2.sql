@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 30, 2020 at 09:20 PM
+-- Generation Time: May 30, 2020 at 10:04 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.5
 
@@ -71,8 +71,10 @@ CREATE TABLE `service` (
 INSERT INTO `service` (`id`, `name`, `capacity`, `type`, `description`, `FK_OFFER`) VALUES
 (1, 'mixCheader', 98, 'data', 'available for old customers', NULL),
 (2, 'hekaya', 2000, 'phone', 'available for active customers', NULL),
-(4, 'pro', 898, 'data', 'for no one', NULL),
-(5, 'baka', 55464, 'phone', 'for any one', NULL);
+(3, 'pro', 898, 'data', 'for no one', NULL),
+(4, 'baka', 55464, 'phone', 'for any one', NULL),
+(5, 'HELLO', 1000, 'phone', 'for no one', NULL),
+(6, 'nbh', 88, 'data', 'for no one', NULL);
 
 -- --------------------------------------------------------
 
@@ -197,7 +199,7 @@ ALTER TABLE `usertransaction`
 -- AUTO_INCREMENT for table `service`
 --
 ALTER TABLE `service`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1010;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1023;
 
 --
 -- AUTO_INCREMENT for table `transaction`
