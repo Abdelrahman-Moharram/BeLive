@@ -2,7 +2,7 @@
 
     session_start();
     require 'db_conn.php';
- if($_SESSION['role'] == 0)
+    if($_SESSION['role'] == 0)
     {
         header("Location: index.php");
     }
@@ -10,10 +10,7 @@
 
 <!DOCTYPE html>
 <html>
-<head> if($_SESSION['role'] == 0)
-    {
-        header("Location: index.php");
-    }
+<head>
   <title>Services</title>
 <style>
   body {

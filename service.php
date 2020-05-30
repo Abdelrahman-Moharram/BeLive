@@ -2,6 +2,10 @@
 
     session_start();
     require 'db_conn.php';
+    if($_SESSION['role'] == 0)
+    {
+        header("Location: index.php");
+    }
 
 ?>
 
@@ -117,7 +121,7 @@ width: 100%;
 			}
 			
 			echo "</table>";
-                echo "  <a href='insertService.html'>INSERT NEW SERVICE</a>";
+                echo "  <a href='insertService.php'>INSERT NEW SERVICE</a>";
 			mysqli_close($connect);
 		?>
 

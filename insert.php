@@ -1,7 +1,13 @@
 <?php
             session_start();
             require 'db_conn.php';
+        if($_SESSION['role'] == 0)
+        {
+            header("Location: index.php");
+        }
            
+
+
             $name = $_POST['name'];
             $type = $_POST['type'];
             $capacity = $_POST['capacity'];

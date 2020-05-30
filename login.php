@@ -16,16 +16,16 @@ if (isset($_POST['submit'])) {
         $_SESSION['internetService'] = $row['internetService'];
         $_SESSION['callService'] = $row['callService'];
         
-        $role = $row['role'];
+        $_SESSION['role'] = $row['role'];
 
 
 
-        if ($role == 0) {
+        if ($_SESSION['role'] == 0) {
             header("Location: index.php");
-            if ($role == 1) {
+            if ($_SESSION['role'] == 1) {
                 header("Location: UserProfile.php");
             }
-        } else if ($role == 1) {
+        } else if ($_SESSION['role'] == 1) {
             header("Location: admin.php");
         } else if ($gmail == "admin.belive@gmail.com") {
             header("Location: admin.php");

@@ -2,7 +2,10 @@
 
     session_start();
     require 'db_conn.php';
-   
+    if($_SESSION['role'] == 1)
+    {
+        header("Location: admin.php");
+    }
 
         if (isset($_POST['Buynow']))
         {
@@ -151,7 +154,7 @@
     
     
     
-        <p style="text-align:center;font-size:80px;font-family:arial;color:#28a9e2">Services</p>
+        <p style="text-align:center;font-size:80px;font-family:arial;color:#28a9e2;margin-top:100px;">Services</p>
     <div style="margin-top:30px;margin-left:10%">
         <?php
         
