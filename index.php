@@ -25,7 +25,7 @@
     <meta name="author" content="">
 
     <!-- Site Icons -->
-    <link rel="shortcut icon" href="uploads/logo.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="uploads/logo.ico" type="image/x-icon"/>
     <link rel="apple-touch-icon" href="uploads/logo.ico">
 
     <!-- Bootstrap CSS -->
@@ -78,10 +78,10 @@
  
 	
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color:#1f1f1f">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color:#fff">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
-			<img class="img-fluid" width="200px" style="" src="uploads/logo.png" alt=""  />
+			<img class="img-fluid" width="90px" style="" src="uploads/logo.png" alt=""  />
 		</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
@@ -93,7 +93,7 @@
               <a class="nav-link js-scroll-trigger active" href="#home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About Us</a>
+              <a class="nav-link js-scroll-trigger active" href="#about">About Us</a>
             </li>
             
             
@@ -104,14 +104,14 @@
               if(isset($_SESSION['email']))
               {
                   echo'<li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="UserProfile.php">'.$_SESSION['firstname'].'</a>
+              <a class="nav-link js-scroll-trigger active" href="UserProfile.php">'.$_SESSION['firstname'].'</a>
             </li>
             
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="offers.php">offers</a>
+              <a class="nav-link js-scroll-trigger active" href="Edit Service.php">services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="logout.php">Logout</a>
+              <a class="nav-link js-scroll-trigger active" href="logout.php">Logout</a>
             </li>
             ';
                   
@@ -119,11 +119,11 @@
               else
               {
                 echo'<li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="login.php">login</a>
+              <a class="nav-link js-scroll-trigger active" href="login.php">login</a>
             </li>
             <span style="color:#28a9e2; text-size:5px;margin-top:8px;">or</span>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="registration.php">signup</a>
+              <a class="nav-link js-scroll-trigger active" href="registration.php">signup</a>
             </li>';
                   
               }
