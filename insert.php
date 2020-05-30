@@ -8,22 +8,27 @@
             $description = $_POST['description'];
              
             // Attempt insert query execution
-            $question = "SELECT count(*) from service";
-            if($question <6){
-              $sql = "INSERT INTO service (name, type, capacity , description) VALUES ( '$name', '$type', '$capacity', '$description')";
-            if(mysqli_query($connect, $sql)){
-                header("refresh:2 ; url =service.php");
-                //echo "dooooooooone";
-                mysqli_close($connect); // Close connection
-                
-                exit;
-            } else{
-                header("refresh:2 ; url =service.php");
-                echo mysqli_error();
-                echo "errrrrrrrrrrrror";
-            }
+            $que= "SELECT count(*)  from service ";
+            $result = mysqli_query($connect, $que);
+            $quantity = mysqli_fetch_assoc($result);
+            
+            if($quantity < 6){
+	            $sql = "INSERT INTO service (name, type, capacity , description) VALUES ( '$name', '$type', '$capacity', '$description')";
+	            if(mysqli_query($connect, $sql)){
+	                header("refresh:2 ; url =service.php");
+	                //echo "dooooooooone";
+	                mysqli_close($connect); // Close connection
+	                
+	                exit;
+	            } else{
+	                header("refresh:2 ; url =service.php");
+	                echo mysqli_error();
+	                
+	            }
         }else{
-        	exit;
+        	header("refresh:2 ; url =service.php");
+	                
+	               
         }
     
     ?>
