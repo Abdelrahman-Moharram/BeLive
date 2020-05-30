@@ -8,10 +8,8 @@ $del = mysqli_query($connect,"delete from service where id = '$id'"); // delete 
 if($del)
 {
     mysqli_close($connect); // Close connection
-    if(header("location:service.php")) // redirects to all records page
-        exit;
-    else if(header("location:manage-users.php"))
-       exit; 
+    header("location:service.php"); // redirects to all records page
+        
 }
 else
 {
