@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 30, 2020 at 05:11 PM
+-- Generation Time: May 30, 2020 at 09:20 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.5
 
@@ -69,12 +69,10 @@ CREATE TABLE `service` (
 --
 
 INSERT INTO `service` (`id`, `name`, `capacity`, `type`, `description`, `FK_OFFER`) VALUES
-(100, 'mixCheader', 98, 'internet', 'available for old customers', NULL),
-(101, 'HELLO', 965, 'phone', 'for any one', NULL),
-(102, 'hekaya', 2000, 'phone and internet', 'available for active customers', NULL),
-(103, '3ady', 500, 'phone and internet a', 'available for all customers', NULL),
-(1004, 'baka', 2000, 'internet', 'active users', NULL),
-(1005, 'pro', 898, 'internet', 'for no one', NULL);
+(1, 'mixCheader', 98, 'data', 'available for old customers', NULL),
+(2, 'hekaya', 2000, 'phone', 'available for active customers', NULL),
+(4, 'pro', 898, 'data', 'for no one', NULL),
+(5, 'baka', 55464, 'phone', 'for any one', NULL);
 
 -- --------------------------------------------------------
 
@@ -114,7 +112,7 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`id`, `firstname`, `lastname`, `image`, `role`, `email`, `phonenumber`, `balance`, `password`, `internetService`, `callService`) VALUES
 (3, 'Aida', 'Ali', '', 0, 'aida1@gmail.com', '01454311204', 0, '147', '', ''),
 (5, 'Nour', 'Saleh', '', 1, 'noursalehothman96@gmail.com', '01494666445', 0, '123', '', ''),
-(8, 'ggg', 'hhh', '', 0, 'noursale4@gmail.com', '01452369632', 0, '123', '', '');
+(8, 'hello', 'hhh', '', 0, 'noursale4@gmail.com', '01452369632', 0, '123', '', '');
 
 -- --------------------------------------------------------
 
@@ -199,7 +197,7 @@ ALTER TABLE `usertransaction`
 -- AUTO_INCREMENT for table `service`
 --
 ALTER TABLE `service`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1007;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1010;
 
 --
 -- AUTO_INCREMENT for table `transaction`
