@@ -159,7 +159,9 @@
                 <div class="col-md-6">
                     <div class="message-box">                        
                         <h2>Welcome to BeLive</h2>
-                        <p> Hello and welcome to our distinguished site, be alive and it is the main thing that is customer service and how to save them from going to the end of the branches so please log in with the company phone number and your email so that you can see all your existing information and how to amend it. </p>
+                        <p> Hello and welcome to our distinguished site, be alive and it is the main thing that is customer service and 
+                        	get your business online in no time , just contact our sales team and we will take care of everything,our goal is your comfort and get all information and services of your internet package ,mobil credit package so please log in with the email-address and your password so that you can see all your existing information and how to amend it.
+                        	 </p>
 						<p>We hope that you will listen to the site and have achieved what it aims to</p>
 
                         
