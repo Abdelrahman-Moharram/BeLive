@@ -78,7 +78,7 @@
  
 	
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color:#1f1f1f">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
 			<img class="img-fluid" width="200px" style="" src="uploads/logo.png" alt=""  />
@@ -106,9 +106,14 @@
                   echo'<li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="UserProfile.php">'.$_SESSION['firstname'].'</a>
             </li>
+            
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="offers.php">offers</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="logout.php">Logout</a>
-            </li>';
+            </li>
+            ';
                   
               }
               else

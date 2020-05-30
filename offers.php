@@ -94,14 +94,66 @@
             font-size:50px;
             color:#000;
             font-family:arial;
+            margin-top: 100px;
         }
     </style>
 
 </head>
 <body>
+    
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color:#1f1f1f;">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="index.php">
+			<img class="img-fluid" width="200px" style="" src="uploads/logo.png" alt=""  />
+		</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ml-auto">
+            
+<!---->
+			
+			
+              <?php
+              if(isset($_SESSION['email']))
+              {
+                  echo'<li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="UserProfile.php">'.$_SESSION['firstname'].'</a>
+            </li>
+           
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="logout.php">Logout</a>
+            </li>
+            ';
+                  
+              }
+              else
+              {
+                echo'<li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="login.php">login</a>
+            </li>
+            <span style="color:#28a9e2; text-size:5px;margin-top:8px;">or</span>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="registration.php">signup</a>
+            </li>';
+                  
+              }
+              ?>
+              
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    
+    
+    
+    
     <div style="margin-top:40px;">
         <p style="text-align:center;font-size:80px;font-family:arial;color:#28a9e2">Cellular</p>
-    <div class="row" style="width:66%;position:relative;margin-left:17%">
+    <div class="row" style="width:66%;position:relative;margin-left:17%;margin-top:40px;">
         <br>
                 <div class="col-md-4 col-sm-6">
                     
