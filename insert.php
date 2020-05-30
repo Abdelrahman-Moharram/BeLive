@@ -1,10 +1,7 @@
 <?php
             session_start();
             require 'db_conn.php';
-        if($_SESSION['role'] == 0)
-        {
-            header("Location: index.php");
-        }
+        
            
 
 
@@ -16,9 +13,7 @@
             // Attempt insert query execution
             $que= "SELECT count(*)  from service ";
             $result = mysqli_query($connect, $que);
-            $quantity = mysqli_fetch_assoc($result);
             
-            if($quantity < 6){
 	            $sql = "INSERT INTO service (name, type, capacity , description) VALUES ( '$name', '$type', '$capacity', '$description')";
 	            if(mysqli_query($connect, $sql)){
 	                header("refresh:2 ; url =service.php");
@@ -31,10 +26,6 @@
 	                echo mysqli_error();
 	                
 	            }
-        }else{
-        	header("refresh:2 ; url =service.php");
-	                
-	               
-        }
+       
     
     ?>
