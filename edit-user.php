@@ -17,7 +17,7 @@ else if(isset($_POST['update']))
         {
            echo'<div class="lastname">The last name is invalid</div>';
         }
-        else if(!preg_match("/^([a-zA-Z]+[0-9]+@gmail.com+)$/",$_POST['email']))
+        else if(!preg_match("/[a-zA-Z0-9]+@[a-zA-Z0-9-]+.[a-zA-Z]+/",$_POST['email']))
         {
            echo'<div class="email">The email  is invalid</div>';
         }
@@ -107,7 +107,7 @@ $userid=$_GET['id'];
 <link href="css/responsive.css" rel="stylesheet" type="text/css"/>
 <link href="css/custom-icon-set.css" rel="stylesheet" type="text/css"/>
 </head>
-<body class=""  style="margin-top: 0px; padding: 100px; background-color: #e5e9ec; position: relative; min-height: 100%; min-width: 100%;>
+<body class=""  style="margin-top: 0px; padding: 100px; background-color:white; position: relative; min-height: 100%; min-width: 100%;>
 
 <div class="page-container row-fluid">  
   
@@ -136,22 +136,22 @@ $userid=$_GET['id'];
          <?php $rt=mysqli_query($connect,"select * from user where id='".$_GET['id']."'");
         while($rw=mysqli_fetch_array($rt))
         {?> 
-      <h3><?php echo $rw['firstname'];?>'s Profile</h3> 
+      <h3 style="font-family:all;"><?php echo $rw['firstname'];?>'s Profile</h3> 
              
                         <form name="muser" method="post" action="" enctype="multipart/form-data">
                         
                             <table width="100%" border="0">
   <tr>
-      <td height="42"style="padding-left: 15px;"><h3>First Name</h3></td>
+      <td height="42"style="padding-left: 15px;"><h3 style="font-family: all;">First Name</h3></td>
     <td><input type="text" name="firstname" id="firstname" value="<?php echo $rw['firstname'];?>" class="form-control"></td>
   </tr>
   
   <tr>
-      <td height="42"style="padding-left: 15px;"><h3>Last Name</h3></td>
+      <td height="42"style="padding-left: 15px;"><h3 style="font-family: all;">Last Name</h3></td>
     <td><input type="text" name="lastname" id="lastname" value="<?php echo $rw['lastname'];?>" class="form-control"></td>
   </tr>
   <tr>
-      <td height="42"style="padding-left: 15px;"><h3>Primary Email</h3></td>
+      <td height="42"style="padding-left: 15px;"><h3 style="font-family: all;"> Email</h3></td>
     <td><input type="text" name="email" id="email" value="<?php echo $rw['email'];?>" class="form-control"></td>
   </tr>
  <!-- <tr>
@@ -159,7 +159,7 @@ $userid=$_GET['id'];
     <td><input type="text" name="altemail" id="altemail" value="<?php echo $rw['email'];?>" class="form-control"></td>
   </tr>-->
   <tr>
-      <td height="42"style="padding-left: 15px;"><h3>Phone-Number</h3></td>
+      <td height="42"style="padding-left: 15px;"><h3 style="font-family: all"> Primary Phone-Number</h3></td>
     <td><input type="text" name="phonenumber" id="phonenumber" value="<?php echo $rw['phonenumber'];?>" class="form-control" readonly></td>
   </tr>
   
