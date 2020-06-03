@@ -52,7 +52,7 @@ require 'db_conn.php';
                     <li>Manage Users </li>
                 </ul>
                 <div class="page-title">	
-                    <a href="Admin.php"><i class="icon-custom-left"></i></a>
+                    <a href="admin.php"><i class="icon-custom-left"></i></a>
                     <h3>Back at home </h3>	
                 </div>
              
@@ -90,10 +90,11 @@ require 'db_conn.php';
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                <?php $ret=mysqli_query($connect,"select * from user");
+                                                <?php $ret=mysqli_query($connect,"select * from user where role =0");
 												$cnt=1;
 												while($row=mysqli_fetch_array($ret))
 												{
+                                                                                                   
 													$_SESSION['ids']=$row['id'];
 												?>
                                                     <tr>
@@ -119,7 +120,7 @@ require 'db_conn.php';
                                                            </form>
                                                           </td>
                                                     </tr>
-                                                    <?php $cnt=$cnt+1; } ?>
+                                                                                                <?php $cnt=$cnt+1; } ?>
                                                
                                                 </tbody>
                                             </table>

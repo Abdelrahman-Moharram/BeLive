@@ -88,7 +88,7 @@ require 'db_conn.php';
                         <br>  
                         
                         <?php
-                        if ($row = mysqli_fetch_array(mysqli_query($connect, "select balance from user where email='".$_SESSION['email']."'")))
+                        if ($row = mysqli_fetch_array(mysqli_query($connect, "select balance from user where phonenumber='".$_SESSION['phonenumber']."'")))
                             echo'<i class="fa fa-money info">' . " " . $row['balance'] . '</i>';
                         ?> 
 
@@ -96,7 +96,7 @@ require 'db_conn.php';
                         <?php
                       
                         
-                        $ret = mysqli_query($connect, "select * from user  where email='".$_SESSION['email']."'");   
+                        $ret = mysqli_query($connect, "select * from user  where phonenumber='".$_SESSION['phonenumber']."'");   
                         if ($row = mysqli_fetch_array($ret)) {
                                 
                             $_SESSION['id'] = $row['id'];
