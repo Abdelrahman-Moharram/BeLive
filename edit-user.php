@@ -9,23 +9,88 @@ if(mysqli_connect_errno()){
 //   `id`, `firstname`, `lastname`, `image`, `role`, `email`, `phonenumber`, `balance`, `password`, `internetService`, `callService`
 else if(isset($_POST['update']))
 {
+  if(!preg_match("/^([a-zA-Z' ]+)$/",$_POST['firstname']))
+        {
+           echo'<div class="firstname">The First name is invalid</div>';
+        }
+        else if(!preg_match("/^([a-zA-Z' ]+)$/",$_POST['lastname']))
+        {
+           echo'<div class="lastname">The last name is invalid</div>';
+        }
+        else if(!preg_match("/^([a-zA-Z]+[0-9]+@gmail.com+)$/",$_POST['email']))
+        {
+           echo'<div class="email">The email  is invalid</div>';
+        }
+
+        
+else{
 $fname=$_POST['firstname'];
 $lname=$_POST['lastname'];
 $altemail=$_POST['email'];
 $phone=$_POST['phonenumber'];
 //$imgs=$_POST['image'];
 $userid=$_GET['id'];
-	$ret=mysqli_query($connect,"update user set firstname='$fname',lastname='$lname', email='$altemail',phonenumber='$phone' where id='$userid'");
-	if($ret)
-	{
-	echo "<script>alert('Data Updated');</script>";	
-	}
-	}
+  $ret=mysqli_query($connect,"update user set firstname='$fname',lastname='$lname', email='$altemail',phonenumber='$phone' where id='$userid'");
+  if($ret)
+  {
+  echo "<script>alert('Data Updated');</script>"; 
+        $_SESSION['email'] =$altemail ;
+        $_SESSION['firstname'] = $fname;
+        $_SESSION['lastname'] = $lname;
+        $_SESSION['phonenumber'] = $phone;
+
+    
+
+  }
+}
+  }
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
+  <style >
+    .firstname{
+            border-radius: 10px 10px 0px 0px;
+            width:400px;
+            position: absolute;
+            text-align: center;
+            font-weight: 500;
+            
+            color: red;
+            display: block;
+            margin-left: 40%;
+            padding: 3px;
+            margin-top:70px;
+                
+            }
+            .lastname{
+                border-radius: 10px 10px 0px 0px;
+                width:400px;
+                position: absolute;
+                text-align: center;
+                font-weight: 500;
+                color: red;
+                display: block;
+                margin-left: 40.5%;
+                padding: 3px;
+                margin-top:110px;
+                
+            }
+            .email{
+                border-radius: 10px 10px 0px 0px;
+                width:400px;
+                position: absolute;
+                text-align: center;
+                font-weight: 500;
+                color: red;
+                display: block;
+                margin-left: 45.5%;
+                padding: 3px;
+                margin-top:160px;
+                
+            }
+  </style>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <meta charset="utf-8" />
 <title>Belive | edit </title>
@@ -44,18 +109,18 @@ $userid=$_GET['id'];
 </head>
 <body class=""  style="margin-top: 0px; padding: 100px; background-color: #e5e9ec; position: relative; min-height: 100%; min-width: 100%;>
 
-<div class="page-container row-fluid">	
-	
-	<div class="clearfix"></div> 
+<div class="page-container row-fluid">  
+  
+  <div class="clearfix"></div> 
   
   </div>
   <a href="#" class="scrollup">Scroll</a>
-   <div class="footer-widget">		
-	<div class="progress transparent progress-small no-radius no-margin">
-		<div data-percentage="79%" class="progress-bar progress-bar-success animate-progress-bar" ></div>		
-	</div>
-	<div class="pull-right">
-	</div>
+   <div class="footer-widget">    
+  <div class="progress transparent progress-small no-radius no-margin">
+    <div data-percentage="79%" class="progress-bar progress-bar-success animate-progress-bar" ></div>   
+  </div>
+  <div class="pull-right">
+  </div>
   </div>
   <!--<div class="page-content" > -->
     <div id="portlet-config" class="modal hide">
@@ -67,11 +132,11 @@ $userid=$_GET['id'];
     </div>
     <div class="clearfix"></div>
     <div class="content">  
-		<div class="page-title">
+    <div class="page-title">
          <?php $rt=mysqli_query($connect,"select * from user where id='".$_GET['id']."'");
-			  while($rw=mysqli_fetch_array($rt))
-			  {?>	
-			<h3><?php echo $rw['firstname'];?>'s Profile</h3>	
+        while($rw=mysqli_fetch_array($rt))
+        {?> 
+      <h3><?php echo $rw['firstname'];?>'s Profile</h3> 
              
                         <form name="muser" method="post" action="" enctype="multipart/form-data">
                         
@@ -87,7 +152,7 @@ $userid=$_GET['id'];
   </tr>
   <tr>
       <td height="42"style="padding-left: 15px;"><h3>Primary Email</h3></td>
-    <td><input type="text" name="email" id="email" value="<?php echo $rw['email'];?>" class="form-control" readonly></td>
+    <td><input type="text" name="email" id="email" value="<?php echo $rw['email'];?>" class="form-control"></td>
   </tr>
  <!-- <tr>
       <td height="42"style="padding-left: 15px;"><h3>Alt Email</h3></td>
@@ -95,7 +160,7 @@ $userid=$_GET['id'];
   </tr>-->
   <tr>
       <td height="42"style="padding-left: 15px;"><h3>Phone-Number</h3></td>
-    <td><input type="text" name="phonenumber" id="phonenumber" value="<?php echo $rw['phonenumber'];?>" class="form-control"></td>
+    <td><input type="text" name="phonenumber" id="phonenumber" value="<?php echo $rw['phonenumber'];?>" class="form-control" readonly></td>
   </tr>
   
  
@@ -145,6 +210,8 @@ $userid=$_GET['id'];
 <script src="assets/js/core.js" type="text/javascript"></script> 
 <script src="assets/js/chat.js" type="text/javascript"></script> 
 <script src="assets/js/demo.js" type="text/javascript"></script> 
+ 
+ 
 
 </body>
 </html>
