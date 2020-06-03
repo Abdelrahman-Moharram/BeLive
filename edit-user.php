@@ -28,7 +28,7 @@ $userid=$_GET['id'];
 <head>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <meta charset="utf-8" />
-<title>CRM | Dashboard </title>
+<title>Belive | edit </title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta content="" name="description" />
 <meta content="" name="author" />
@@ -89,10 +89,10 @@ $userid=$_GET['id'];
       <td height="42"style="padding-left: 15px;"><h3>Primary Email</h3></td>
     <td><input type="text" name="email" id="email" value="<?php echo $rw['email'];?>" class="form-control" readonly></td>
   </tr>
-  <tr>
+ <!-- <tr>
       <td height="42"style="padding-left: 15px;"><h3>Alt Email</h3></td>
     <td><input type="text" name="altemail" id="altemail" value="<?php echo $rw['email'];?>" class="form-control"></td>
-  </tr>
+  </tr>-->
   <tr>
       <td height="42"style="padding-left: 15px;"><h3>Phone-Number</h3></td>
     <td><input type="text" name="phonenumber" id="phonenumber" value="<?php echo $rw['phonenumber'];?>" class="form-control"></td>
@@ -112,6 +112,7 @@ $userid=$_GET['id'];
     <td>&nbsp;</td>
     <td height="42">
         <button type="submit" name="update" class="btn btn-primary">Save changes</button>
+        <a class="btn btn-primary" href="UserProfile.php">Back your Profile</a>
         
     </td>
   </tr>

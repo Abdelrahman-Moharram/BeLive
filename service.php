@@ -61,7 +61,7 @@ width: 100%;
     border-radius: 50%;
     top:-50px;
     left: calc(50%-50%);
-*
+
 }
 .service{
 	opacity: 1;
@@ -121,10 +121,11 @@ width: 100%;
 			}
 			
 			echo "</table>";
-                echo "  <a href='insertService.php'>INSERT NEW SERVICE</a>";
+                        echo "  <a href='insertService.php'>INSERT NEW SERVICE</a>";
 			mysqli_close($connect);
 		?>
-
+                <button><a href="admin.php?id=<?php echo $row['id'];?>"style="background: whitesmoke;">back to home</a></button>
 </div>
+    
 </body>
 </html>

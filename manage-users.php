@@ -110,8 +110,8 @@ require 'db_conn.php';
                                                         <td><?php echo $row['callService'];?></td>
                                                           <td>
                                                           <form name="abc" action="" method="post">
-                                                           <a href="edit-user.php?id=<?php echo $row['id'];?>" class="btn btn-primary btn-xs btn-mini">View n Edit</a> 
-                                                           <button type="button" class="btn btn-danger btn-xs btn-mini"><?php echo "<a href='delete.php?id=".$row['id']."'>Delete</a>"; ?> </button>
+                                                           
+                                                           <button type="button" class="btn btn-danger btn-xs btn-mini"><?php echo "<a href='delete-user.php?id=".$row['id']."'>Delete</a>"; ?> </button>
                                                            
                                                            
                                                    
@@ -120,10 +120,10 @@ require 'db_conn.php';
                                                           </td>
                                                     </tr>
                                                     <?php $cnt=$cnt+1; } ?>
+                                               
                                                 </tbody>
                                             </table>
-                         
-                                    </div>
+                                       </div>
                                 </div>
                             </div>
                         </div>

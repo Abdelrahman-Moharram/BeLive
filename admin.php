@@ -51,6 +51,9 @@
                 <li class="current"><a href="#welcome">Welcome</a></li>
                 <li><a href="#installation">Edit Services</a></li>
                 <li><a href="#tmpl-structure">View Info</a></li>
+                <li><a href="#logout">Logout</a></li>
+                
+                
 
             </ul>
         </nav>
@@ -94,7 +97,7 @@
 
 
 
-            <section id="installation">
+            <section id="tmpl-structure">
                 <div class="content-header">
 
                     <h1 style="width:50%;background:#4a8cdb ;color: black; border-radius: 20px;height: 20px;padding: 25px;margin: 0px;" class="title">View Informations Of Users</h1>
@@ -113,6 +116,23 @@
 
             </section> 
 
+            
+            <section id="logout">
+                <div class="content-header">
+                    <h1 style="width:50%;background: #4a8cdb;color: black; border-radius: 20px;height: 20px;padding: 25px;margin: 5px;  text-decoration: blink;">At the Final</h1>
+                </div>
+                <h2 class="title">Logout if there's not any thing.</h2>
+
+                <div class="section-content">
+                     
+                    <ul>
+                        <li><code><a href="logout.php">Logout</a></code></li>
+
+
+                    </ul>
+                   
+                </div>
+            </section>
         </div>
     </div>
 
