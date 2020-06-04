@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 30, 2020 at 10:04 PM
+-- Generation Time: Jun 04, 2020 at 02:47 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.5
 
@@ -24,34 +24,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `complaint`
---
-
-CREATE TABLE `complaint` (
-  `id` int(10) NOT NULL,
-  `detail` varchar(100) NOT NULL,
-  `title` varchar(20) NOT NULL,
-  `time` time NOT NULL,
-  `seen` tinyint(1) NOT NULL,
-  `FK_USER` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `offer`
---
-
-CREATE TABLE `offer` (
-  `id` int(10) NOT NULL,
-  `percentage` float NOT NULL,
-  `startDate` date NOT NULL,
-  `endDate` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `service`
 --
 
@@ -60,21 +32,19 @@ CREATE TABLE `service` (
   `name` varchar(20) NOT NULL,
   `capacity` int(50) NOT NULL,
   `type` varchar(20) NOT NULL,
-  `description` varchar(50) NOT NULL,
-  `FK_OFFER` int(10) DEFAULT NULL
+  `description` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `service`
 --
 
-INSERT INTO `service` (`id`, `name`, `capacity`, `type`, `description`, `FK_OFFER`) VALUES
-(1, 'mixCheader', 98, 'data', 'available for old customers', NULL),
-(2, 'hekaya', 2000, 'phone', 'available for active customers', NULL),
-(3, 'pro', 898, 'data', 'for no one', NULL),
-(4, 'baka', 55464, 'phone', 'for any one', NULL),
-(5, 'HELLO', 1000, 'phone', 'for no one', NULL),
-(6, 'nbh', 88, 'data', 'for no one', NULL);
+INSERT INTO `service` (`id`, `name`, `capacity`, `type`, `description`) VALUES
+(1, 'mixCheader', 98, 'data', 'available for old customers'),
+(2, 'hekaya', 2000, 'phone', 'available for active customers'),
+(3, 'pro', 898, 'data', 'for no one'),
+(4, 'baka', 55464, 'phone', 'for any one'),
+(5, 'HELLO', 1000, 'phone', 'for no one');
 
 -- --------------------------------------------------------
 
@@ -144,24 +114,10 @@ CREATE TABLE `usertransaction` (
 --
 
 --
--- Indexes for table `complaint`
---
-ALTER TABLE `complaint`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `C2` (`FK_USER`);
-
---
--- Indexes for table `offer`
---
-ALTER TABLE `offer`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `service`
 --
 ALTER TABLE `service`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `C1` (`FK_OFFER`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `transaction`
@@ -216,18 +172,6 @@ ALTER TABLE `user`
 --
 -- Constraints for dumped tables
 --
-
---
--- Constraints for table `complaint`
---
-ALTER TABLE `complaint`
-  ADD CONSTRAINT `C2` FOREIGN KEY (`FK_USER`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `service`
---
-ALTER TABLE `service`
-  ADD CONSTRAINT `C1` FOREIGN KEY (`FK_OFFER`) REFERENCES `offer` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `userservice`
