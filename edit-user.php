@@ -107,7 +107,7 @@ $userid=$_GET['id'];
 <link href="css/responsive.css" rel="stylesheet" type="text/css"/>
 <link href="css/custom-icon-set.css" rel="stylesheet" type="text/css"/>
 </head>
-<body class=""  style="margin-top: 0px; padding: 100px; background-color:white; position: relative; min-height: 100%; min-width: 100%;>
+<body class=""  style="margin-top: 0px; padding: 100px; background-color:white; position: relative; min-height: 100%; min-width: 100%;">
 
 <div class="page-container row-fluid">  
   

@@ -89,7 +89,7 @@ require 'db_conn.php';
                         
                         <?php
                         if ($row = mysqli_fetch_array(mysqli_query($connect, "select balance from user where phonenumber='".$_SESSION['phonenumber']."'")))
-                            echo'<i class="fa fa-money info">' . " " . $row['balance'] . '</i>';
+                            echo'<i class="fa fa-money info">' . " " . $_SESSION['bal'] . '</i>';
                         ?> 
 
                         <hr>  

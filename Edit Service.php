@@ -188,7 +188,7 @@
                             <form method="post">
                                 <input value="<?php echo $row['type'] ;?>" name="offertype" hidden>
                                 <input value="<?php echo $row['name'] ;?>" name="offername" hidden>
-                                <button type="submit" class="sim-btn hvr-bounce-to-top pricingTable-signup" value="<?php echo $row['capacity'] ;?>" name="Buynow">
+                                <button type="submit" class="sim-btn hvr-bounce-to-top pricingTable-signup" value="<?php echo $row['capacity'] ;}?>" name="Buynow">
                                 BuyNow</button>
                                 
                                 
@@ -198,12 +198,7 @@
                     </div>
                 </div>
         
-        <?php
-        }
         
-        
-        
-        ?>
         
         
         

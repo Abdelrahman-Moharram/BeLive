@@ -360,8 +360,7 @@ if (isset($_POST['submit'])) {
                     <input type="password" id="password" class="fadeIn third" name="password" placeholder="password.." maxlength="50" required>
                     <input type="submit" class="fadeIn fourth" id="closeForm" value="Log In" name="submit" onclick="closeForm()">
                 </form>
-<?php ?>
-                <a href="forget.php" class="underlineHover" style="margin:10px;margin-top:-10px;">Forget password</a>
+                
 
                 <!-- Remind Passowrd -->
                 <div id="formFooter" style="background-color: #333333">
